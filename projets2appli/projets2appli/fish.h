@@ -1,5 +1,5 @@
-#pragma once
-public class Fish
+//#pragma once
+class Fish
 {
 public:
 	Fish();

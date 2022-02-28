@@ -21,9 +21,24 @@
     <ClCompile Include="fish.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="fish.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="menu.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="grid.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="coordinates.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="leaderboards.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
