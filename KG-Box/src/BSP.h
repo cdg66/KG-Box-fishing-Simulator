@@ -16,14 +16,14 @@
 #define ENC_A       2
 #define ENC_B       3
 
-#define A1          21
+#define sA1         25
 #define B1          27
 #define C1          29
 #define D1          31
 #define E1          33
 #define F1          35
 #define G1          37
-#define A2          39
+#define sA2         39
 #define B2          41
 #define C2          43
 #define D2          45
@@ -36,7 +36,8 @@
 #define BTN2        24
 #define BTN3        26
 #define BTN4        28
+#define BTNON       0
  
-#define Moteur      29 // not fixed
+#define MOTEUR      29 // not fixed
 
 #endif
