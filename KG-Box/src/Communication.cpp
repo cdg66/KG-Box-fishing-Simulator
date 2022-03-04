@@ -1,6 +1,6 @@
 #include "Communication.h"
 
-
+#TODO  Add comm protocol
 /*---------------------------Definition de fonctions ------------------------*/
 
 void serialEvent() { shouldRead_ = true; }
