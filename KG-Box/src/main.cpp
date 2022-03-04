@@ -2,6 +2,7 @@
 #include "Test.h"
 #include <ArduinoJson.h>
 #include "SeptSegement.h"
+#include "Joystick.h"
 
 #define BAUD 9600        // Frequence de transmission serielle
 

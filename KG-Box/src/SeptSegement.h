@@ -44,25 +44,54 @@ void SeptSegement::BCDToSeptSeg(uint8_t *Seg, uint8_t BCD)
         Seg[SegmentPlace::D] = SegOn;
         break;
     case 3:
-        /* code */
+        Seg[SegmentPlace::A] = SegOn;
+        Seg[SegmentPlace::B] = SegOn;
+        Seg[SegmentPlace::G] = SegOn;
+        Seg[SegmentPlace::C] = SegOn;
+        Seg[SegmentPlace::D] = SegOn;
         break;
     case 4:
-        /* code */
+        Seg[SegmentPlace::F] = SegOn;
+        Seg[SegmentPlace::G] = SegOn;
+        Seg[SegmentPlace::B] = SegOn;
+        Seg[SegmentPlace::C] = SegOn;
         break;
     case 5:
-        /* code */
+        Seg[SegmentPlace::A] = SegOn;
+        Seg[SegmentPlace::F] = SegOn;
+        Seg[SegmentPlace::G] = SegOn;
+        Seg[SegmentPlace::C] = SegOn;
+        Seg[SegmentPlace::D] = SegOn;
         break;
     case 6:
-        /* code */
+        Seg[SegmentPlace::A] = SegOn;
+        Seg[SegmentPlace::F] = SegOn;
+        Seg[SegmentPlace::E] = SegOn;
+        Seg[SegmentPlace::D] = SegOn;
+        Seg[SegmentPlace::C] = SegOn;
+        Seg[SegmentPlace::G] = SegOn;
         break;
     case 7:
-        /* code */
+        Seg[SegmentPlace::A] = SegOn;
+        Seg[SegmentPlace::B] = SegOn;
+        Seg[SegmentPlace::C] = SegOn;
         break;
     case 8:
-        /* code */
+        Seg[SegmentPlace::A] = SegOn;
+        Seg[SegmentPlace::B] = SegOn;
+        Seg[SegmentPlace::C] = SegOn;
+        Seg[SegmentPlace::D] = SegOn;
+        Seg[SegmentPlace::E] = SegOn;
+        Seg[SegmentPlace::F] = SegOn;
+        Seg[SegmentPlace::G] = SegOn;
         break;
     case 9:
-        /* code */
+        Seg[SegmentPlace::A] = SegOn;
+        Seg[SegmentPlace::B] = SegOn;
+        Seg[SegmentPlace::C] = SegOn;
+        Seg[SegmentPlace::D] = SegOn;
+        Seg[SegmentPlace::E] = SegOn;
+        Seg[SegmentPlace::G] = SegOn;
         break;
     
     default:
@@ -104,14 +133,25 @@ SeptSegement::SeptSegement(uint8_t A,uint8_t B,uint8_t C,uint8_t D,uint8_t E,uin
 
 SeptSegement::~SeptSegement()
 {
+    off();
 }
 
 void SeptSegement::write(uint8_t number)
 {
+    uint8_t seg[7];
 
+    BCDToSeptSeg(seg, number);
+    for (int i = 0; i < 7; i++)
+    {
+        digitalWrite(Segement[i], seg[i] );
+    } 
 }
 
 void SeptSegement::off()
 {
+    for (int i = 0; i < 7; i++)
+    {
+        digitalWrite(Segement[i],  !SegOn );
+    } 
 }
 #endif

@@ -1,7 +1,8 @@
-#ifdef BOUTON_H
+#ifndef BOUTON_H
 #define BOUTON_H
 
+#include <Arduino.h>
 
-#define BOUTONGETSTATE(Pin)
+#define BOUTONSTATE(Pin) digitalRead(Pin)
 
 #endif
