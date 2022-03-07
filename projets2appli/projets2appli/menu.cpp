@@ -86,7 +86,7 @@ o      ______/~/~/~/__           /((
 
 	cout << "Fishing Game" << endl;
 	cout << "Naviguer en utilisant le chiffre approprie" << endl;
-	cout << "1. Commencer une nouvelle partie avec les reglages definis \n 2. Modifier les reglages \n" << endl;
+	cout << "  1. Commencer une nouvelle partie avec les reglages definis \n  2. Modifier les reglages \n" << endl;
 	cout << "Hall of Fame" << endl;
 	cout << /*print de classement ici*/"\n" << endl;
 	

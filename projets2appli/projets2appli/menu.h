@@ -1,6 +1,9 @@
 
 #define MENU_H
-
+#include "fish.h"
+#include "grid.h"
+#include "leaderboards.h"
+#include "coordinates.h"
 class Menu {
 
 public:
@@ -13,7 +16,7 @@ public:
 
 
 private:
-	//Grid menuGrid;
+	Grid gameGrid;
 	// struct pour les coordinates
 
 };
