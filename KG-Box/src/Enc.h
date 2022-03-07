@@ -26,7 +26,7 @@ Enc::~Enc()
 
 Enc::getPulseCount()
 {
-    return  myEnc.read();
+    return  myEnc->read();
 }
 
 #endif
