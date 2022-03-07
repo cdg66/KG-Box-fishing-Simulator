@@ -37,7 +37,7 @@ void SeptSegement::BCDToSeptSeg(uint8_t *Seg, uint8_t BCD)
         ValON = 1;
     }
     BCD = BCD & 0x0F;
-    Serial.print(BCD);
+    //Serial.print(BCD);
     // clear buffer with off state
     for (int i =0; i > 7;i++)
     {
@@ -128,11 +128,11 @@ void SeptSegement::BCDToSeptSeg(uint8_t *Seg, uint8_t BCD)
     default:
         break;
     }
-    for (int i = 0; i< 7; i++)
-    {
-        Serial.print(Seg[i]);
-    }
-    Serial.print("\n");
+    //for (int i = 0; i< 7; i++)
+    //{
+    //    Serial.print(Seg[i]);
+    //}
+    //Serial.print("\n");
 }
 
 SeptSegement::SeptSegement(uint8_t A,uint8_t B,uint8_t C,uint8_t D,uint8_t E,uint8_t F,uint8_t G, uint8_t number, uint8_t OnState )
