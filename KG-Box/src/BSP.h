@@ -17,7 +17,7 @@
 #define ENC_B       3
 
 #define sA1         25
-#define B1          27
+#define sB1          27
 #define C1          29
 #define D1          31
 #define E1          33
@@ -26,7 +26,7 @@
 #define sA2         39
 #define B2          41
 #define C2          43
-#define D2          45
+#define D2          53
 #define E2          47
 #define F2          49
 #define G2          51
