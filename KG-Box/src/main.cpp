@@ -5,6 +5,7 @@
 #include "Joystick.h"
 #include "Encoder.h"
 #include "Bouton.h"
+#include "Communication.h"
 
 #define BAUD 9600        // Frequence de transmission serielle
 
@@ -12,7 +13,7 @@ void setup() {
   // put your setup code here, to run once:
   //test_unitaire();
   Serial.begin(BAUD);
-  SeptSegement* seg2 = new SeptSegement (sA2,B2,C2,D2, E2, F2, G2,1,SEGON );
+  //SeptSegement* seg2 = new SeptSegement (sA2,B2,C2,D2, E2, F2, G2,1,SEGON );
   //Enc* Encodeur0 = new Enc (ENC_A, ENC_B);
   
   
@@ -44,7 +45,7 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   //test
-  int16_t Position[2] = {0,0}; //[X,Y]
+  //int16_t Position[2] = {0,0}; //[X,Y]
   Encoder* myEnc = new Encoder(ENC_A, ENC_B);
   Joystick* Joystick0 = new Joystick(JSTICK_A1, JSTICK_A2);
   while (1)
@@ -53,7 +54,7 @@ void loop() {
     Joystick0->Update();
     //Joystick0->GetArray(Position);
 
-    Serial.print("Joystick X: ");
+    /*Serial.print("Joystick X: ");
     Serial.print( Joystick0->GetX());
     Serial.print(" ,");
 
@@ -80,7 +81,11 @@ void loop() {
     Serial.print("Encodeur: ");
     Serial.print(myEnc->read());
     Serial.print(" ,");
-    Serial.print(" \n");
+    Serial.print(" \n");*/
+
+
+    sendMsg(Joystick0->GetX(), Joystick0->GetY(), BOUTONSTATE(BTN2), BOUTONSTATE(BTN3), BOUTONSTATE(BTN4), BOUTONSTATE(JSTICK_BTN), 0, 0, 0, myEnc->read());
     delay(1000);
+
   }
 }
