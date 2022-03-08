@@ -142,6 +142,7 @@
     <ClCompile Include="appliS2.cpp" />
     <ClCompile Include="fish.cpp" />
     <ClCompile Include="grid.cpp" />
+    <ClCompile Include="Leaderboards.cpp" />
     <ClCompile Include="menu.cpp" />
   </ItemGroup>
   <ItemGroup>
