@@ -13,7 +13,7 @@ void setup() {
   // put your setup code here, to run once:
   //test_unitaire();
   Serial.begin(BAUD);
-  //SeptSegement* seg2 = new SeptSegement (sA2,B2,C2,D2, E2, F2, G2,1,SEGON );
+
   //Enc* Encodeur0 = new Enc (ENC_A, ENC_B);
   
   
@@ -46,6 +46,10 @@ void loop() {
   // put your main code here, to run repeatedly:
   //test
   //int16_t Position[2] = {0,0}; //[X,Y]
+  SeptSegement* seg1 = new SeptSegement (sA1,sB1,C1,D1, E1, F1, G1,0,SEGON );
+  SeptSegement* seg2 = new SeptSegement (sA2,B2,C2,D2, E2, F2, G2,0,SEGON );
+  uint8_t segement_7 = 0;
+  bool mot = 0;
   Encoder* myEnc = new Encoder(ENC_A, ENC_B);
   Joystick* Joystick0 = new Joystick(JSTICK_A1, JSTICK_A2);
   while (1)
@@ -84,8 +88,15 @@ void loop() {
     Serial.print(" \n");*/
 
 
-    sendMsg(Joystick0->GetX(), Joystick0->GetY(), BOUTONSTATE(BTN2), BOUTONSTATE(BTN3), BOUTONSTATE(BTN4), BOUTONSTATE(JSTICK_BTN), 0, 0, 0, myEnc->read());
-    delay(1000);
+    //sendMsg(Joystick0->GetX(), Joystick0->GetY(), BOUTONSTATE(BTN2), BOUTONSTATE(BTN3), BOUTONSTATE(BTN4), BOUTONSTATE(JSTICK_BTN), 0, 0, 0, myEnc->read());
+    if (shouldRead_)
+    {
+      Serial.print("Message Recu \n");
+      readMsg(segement_7, mot);
+      seg1->write(segement_7);
+      seg2->write((segement_7>>4));
+    }
+    delay(10);
 
   }
 }

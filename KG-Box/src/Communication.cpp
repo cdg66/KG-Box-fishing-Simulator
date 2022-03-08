@@ -1,4 +1,5 @@
 #include "Communication.h"
+#include <Arduino.h>
 
 /*---------------------------- Variables globales ---------------------------*/
 volatile bool shouldSend_ = false;  // Drapeau prêt à envoyer un message
