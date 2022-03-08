@@ -63,9 +63,10 @@ void readMsg(uint8_t &segement_7, bool &mot){
     return;
   }
   
-  docRecive["7segement"] = segement_7;
-  docRecive["Moteur"] = mot;
-
+  parse_msg = docRecive["7segement"];
+  parse_msg = docRecive["Moteur"];
+ segement_7 = docRecive["7segement"];
+ mot = docRecive["Moteur"].as<bool>();
   // Analyse des éléments du message message
   //parse_msg = doc["led"];
   //if (!parse_msg.isNull()) {
