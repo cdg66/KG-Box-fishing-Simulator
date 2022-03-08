@@ -11,7 +11,7 @@ public:
 	~Menu();
 	void changeSettings();
 	void start();
-	void changeGrid();
+	void changeGrid(int aSize);
 	void show();
 
 

@@ -1,30 +1,38 @@
-#include "Poisson.h"
+#include "fish.h"
 #include "grid.h"
 
-#include <stdlib.h>
+#include <iostream>
+#include <random>
 
-Poisson::Poisson()
+using namespace std;
+
+Fish::Fish(){}
+
+Fish::~Fish(){}
+
+
+void Fish::randomPosition(int max_size) 
 {
-    cord.x = rand() % 3;
-    cord.y = rand() % 3;
+    std::default_random_engine generator;
+    std::uniform_real_distribution<int> distribution(0, (max_size - 1)); //int from 0 to max_size-1
+
+    int random_x = distribution(generator);
+    int random_y = distribution(generator);
+
+    cord.x = random_x;
+    cord.y = random_y;
 }
 
-
-Poisson::~Poisson() {}
-
-
-void Poisson::setMouvement()
+void Fish::setMouvement()
 {
-    //randomNumber = rand() % 10 + 1;
+    std::default_random_engine generator;
+    std::uniform_real_distribution<int> distribution(-1, 1); //int from -1 to 1
 
+    int random_number1 = distribution(generator);
+    int random_number2 = distribution(generator);
 
-
-    int liste;
-    int i = rand() % 2;
-    int j = rand() % 2;
-    
-    //cord.x = cord.x + liste[i];
-    //cord.y = cord.y + liste[j];
+    cord.x = cord.x + random_number1;
+    cord.y = cord.y + random_number2;
     
     if (cord.x < 0)
     {
@@ -44,7 +52,7 @@ void Poisson::setMouvement()
 }
 
 
-void Poisson::dessinPoisson()
+void Fish::dessinPoisson()
 {
     //grid[cord.x][cord.y] = "O";
 }

@@ -40,16 +40,21 @@ void Menu::changeSettings()
 		changeSettings();
 		break;
 	case 4:
+		changeGrid(4);
 		system("cls");
 		cout << " Modification apportee avec succes " << endl;
 		changeSettings();
 		break;
 	case 5:
+		changeGrid(5);
+
 		system("cls");
 		cout << " Modification apportee avec succes " << endl;
 		changeSettings();
 		break;
 	case 6:
+		changeGrid(7);
+
 		system("cls");
 		cout << " Modification apportee avec succes " << endl;
 		changeSettings();
@@ -63,10 +68,32 @@ void Menu::changeSettings()
 
 void Menu::start()
 {
+	int choice;
+	/*
+	bool started;
+	if (!started) {
+		GridObject obj = {10,10};
+	}
+	*/
+
+	gameGrid.renderGridOnly();
+
+	cout << "Appuyer sur \"1\" pour commencer la partie" << endl;
+	cin >> choice;
+
+	if (choice == 1) {
+		//renderGame();
+	}
+	else if (choice == 2) {
+		system("cls");
+		show();
+	}
+
 }
 
-void Menu::changeGrid()
+void Menu::changeGrid(int aSize)
 {
+	gameGrid.changeSize(aSize);
 }
 
 
@@ -74,14 +101,15 @@ void Menu::show()
 {
 
 	cout << R"(
- o
-o      ______/~/~/~/__           /((
-  o  // __            ====__    /_((
- o  //  @))       ))))      ===/__((
-    ))           )))))))        __((
-    \\     \)     ))))    __===\ _((
-     \\_______________====      \_((
-                                 \((
+      _______
+ ,-~~~       ~~~-,
+(                 )
+ \_-, , , , , ,-_/
+    / / | | \ \
+    | | | | | |
+    | | | | | |
+   / / /   \ \ \
+   | | |   | | |
 )" << "\n" << endl;
 
 	cout << "Fishing Game" << endl;

@@ -4,14 +4,17 @@ class Grid {
 public:
 	Grid();
 	~Grid();
-	void changeSize(int size);
-    void render(GridObject obj);
+	void changeSize(int aSize);
+    void render(GridObject obj, GridObject fish);
+	void renderGridOnly();
 	int getSize();
+	void printTopLine();
 	int totalX;
 	int totalY;
-private:
 	int size = 3;
-	int array[3][3];
+
+private:
+	
 
 };
 
