@@ -1,8 +1,8 @@
 //#pragma once
 
 
-#ifndef POISSON
-#define POISSON
+#ifndef FISH
+#define FISH
 
 #include "coordinates.h"
 
@@ -10,15 +10,14 @@ class Fish
 {
 
 private:
-
-	int score;
 	Coordinates cord;
 
 public:
 
-	Fish(); //instencie une coordonnee random
+	Fish();
 	~Fish();
 
+	void randomPosition(int max_size); //génère une coordonnee random
 	void setMouvement(); //modifie la coordonnee instanciee
 	void dessinPoisson(); //met le poisson sur la grille
 
