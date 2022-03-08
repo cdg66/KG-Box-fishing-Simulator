@@ -44,5 +44,8 @@
     <ClInclude Include="leaderboards.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="gridObject.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
