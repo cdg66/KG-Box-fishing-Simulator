@@ -156,12 +156,19 @@ void Menu::renderGame() {
 
 	}
 	cout << "end";
-	GridObject fish{ 1,1 };
-	gameGrid.render(fish);
+	gameRun();
 }
 
 void Menu::gameRun() {
+	srand(time(0));
+	Fish aFish;
+	aFish.randomPosition(gameGrid.getSize());
+	cout << aFish.cord.x << aFish.cord.y << endl;
+	GridObject fish{ aFish.cord.x,aFish.cord.y };
+	gameGrid.render(fish);
 
+	// boucler SetMovement();
+	// check if both ==
 }
 
 void Menu::changeGrid(int aSize)

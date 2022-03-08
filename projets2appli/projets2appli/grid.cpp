@@ -54,13 +54,17 @@ void Grid::render(GridObject fish) {
         cout << "|";
         for (int row = 0; row < totalX; row++) {
             if (col == yRod && row == xRod) {
-                cout << "X" << "|";
+                if (fish.x == row && fish.y == col) {
+                    cout << "A" << "|";
+                }
+                else {
+                    cout << "X" << "|";
+                }
             }
             else if(fish.x == row && fish.y == col){
                 cout << "O" << "|";
             } else {
                 cout << " " << "|";
-
             }
         }
         printTopLine();

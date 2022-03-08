@@ -1,5 +1,4 @@
-﻿  appliS2.cpp
-  menu.cpp
-C:\Users\emile\Desktop\projetARDUIS2\projets2appli\projets2appli\menu.cpp(110,6): warning C4101: 'choice': unreferenced local variable
+﻿  fish.cpp
+  grid.cpp
   Generating Code...
   projets2appli.vcxproj -> C:\Users\emile\Desktop\projetARDUIS2\projets2appli\Debug\projets2appli.exe

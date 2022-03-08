@@ -5,21 +5,28 @@
 
 using namespace std;
 
-Fish::Fish(){}
+Fish::Fish(){
+    this->cord.x =1;
+    this->cord.y =1;
+}
 
-Fish::~Fish(){}
+
+Fish::~Fish(){
+    
+}
+
 
 
 void Fish::randomPosition(int max_size) 
 {
-    std::default_random_engine generator;
-    std::uniform_int_distribution<int> distribution(0, (max_size - 1)); //int from 0 to max_size-1
-
+   // std::default_random_engine generator;
+   // std::uniform_int_distribution<int> distribution(0, (max_size - 1)); //int from 0 to max_size-1
+    /*
     int random_x = distribution(generator);
     int random_y = distribution(generator);
-
-    cord.x = random_x;
-    cord.y = random_y;
+    */
+    cord.x = rand() % max_size;
+    cord.y = rand() % max_size;
 }
 
 void Fish::setMouvement()
@@ -30,9 +37,21 @@ void Fish::setMouvement()
     int random_number1 = distribution(generator);
     int random_number2 = distribution(generator);
 
-    cord.x = cord.x + random_number1;
-    cord.y = cord.y + random_number2;
-    
+    int randomX = rand() % 2;
+    int randomY = rand() % 2;
+    if (randomY == 0 && randomX == 0){
+        bool working = true;
+        while (working) {
+            randomX = rand() % 2;
+            randomY = rand() % 2;
+            if (randomY == 0 || randomX == 0) {
+                working = false;
+            }
+        }
+    }
+    cord.x = randomX;
+    cord.y = randomY;
+
     if (cord.x < 0)
     {
         cord.x = -cord.x;
