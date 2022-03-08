@@ -1,7 +1,2 @@
-﻿  appliS2.cpp
-  fish.cpp
-C:\Users\emile\Desktop\projetARDUIS2\projets2appli\projets2appli\fish.cpp(22,9): warning C4101: 'liste': unreferenced local variable
-  grid.cpp
-  menu.cpp
-  Generating Code...
+﻿  menu.cpp
   projets2appli.vcxproj -> C:\Users\emile\Desktop\projetARDUIS2\projets2appli\Debug\projets2appli.exe

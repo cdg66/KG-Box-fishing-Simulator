@@ -4,16 +4,19 @@
 using namespace std;
 Grid::Grid()
 {
-
+    totalX = size;
+    totalY = size;
 }
 
 Grid::~Grid()
 {
 }
 
-void Grid::changeSize(int size)
+void Grid::changeSize(int aSize)
 {
-    this->size =  array[size][size];
+    size = aSize;
+    totalX = size;
+    totalY = size;
 }
 
 int Grid::getSize()
@@ -21,12 +24,15 @@ int Grid::getSize()
     return size;
 }
 
-void Grid::render(GridObject obj) {
+void Grid::render(GridObject obj, GridObject fish) {
     
     for (int col = 0; col < totalY; col++) {
         for (int row = 0; row < totalX; row++) {
             if (obj.x == row && obj.y == col) {
                 cout << "O";
+            }
+            else if (fish.x == row && fish.y == col){
+                cout << "F";
             }
             else {
                 cout << "-";
@@ -34,6 +40,25 @@ void Grid::render(GridObject obj) {
         }
         cout << endl;
     }
+}
+
+void Grid::renderGridOnly() {
+    printTopLine();
+    for (int col = 0; col < totalY; col++) {
+        cout << "|";
+        for (int row = 0; row < totalX; row++) {
+            cout << " "<< "|";
+        }
+        printTopLine();
+    }
+}
+
+void Grid::printTopLine() {
+    cout << endl;
+    for (int i = 0; i < (size * 2) + 1; i++) {
+        cout << "-";
+    }
+    cout << endl;
 }
 
 /*
