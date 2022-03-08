@@ -1,5 +1,10 @@
 #include "Communication.h"
 
+/*---------------------------- Variables globales ---------------------------*/
+volatile bool shouldSend_ = false;  // Drapeau prêt à envoyer un message
+volatile bool shouldRead_ = false;  // Drapeau prêt à lire un message
+StaticJsonDocument<500> docSend;
+StaticJsonDocument<500> docRecive;
 //#TODO  Add comm protocol
 /*---------------------------Definition de fonctions ------------------------*/
 
@@ -12,10 +17,10 @@ Entrée : Aucun
 Sortie : Aucun
 Traitement : Envoi du message
 -----------------------------------------------------------------------------*/
-void sendMsg(int8_t JStick_Amp, float JStick_Ang, bool Btn2, bool Btn3, bool Btn4, bool Btn5, int16_t ACC_X, int16_t ACC_Y, int16_t ACC_Z, int8_t Encodeur) {
+void sendMsg(int16_t JStick_X, int16_t JStick_Y, bool Btn2, bool Btn3, bool Btn4, bool Btn5, int16_t ACC_X, int16_t ACC_Y, int16_t ACC_Z, long Encodeur) {
   // Elements du message
-  docSend["JStick_Amplitude"] = JStick_Amp;
-  docSend["JStick_Angle"] = JStick_Ang;
+  docSend["JStick_X"] = JStick_X;
+  docSend["JStick_Y"] = JStick_Y;
   docSend["Bouton2"] = Btn2;
   docSend["Bouton3"] = Btn3;
   docSend["Bouton4"] = Btn4;
@@ -58,9 +63,10 @@ void readMsg(uint8_t &segement_7, bool &mot){
     return;
   }
   
-  docRecive["7segement"] = segement_7;
-  docRecive["Moteur"] = mot;
-
+  parse_msg = docRecive["7segement"];
+  parse_msg = docRecive["Moteur"];
+ segement_7 = docRecive["7segement"];
+ mot = docRecive["Moteur"].as<bool>();
   // Analyse des éléments du message message
   //parse_msg = doc["led"];
   //if (!parse_msg.isNull()) {
