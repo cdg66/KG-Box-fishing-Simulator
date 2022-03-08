@@ -13,6 +13,8 @@ public:
 	void start();
 	void changeGrid(int aSize);
 	void show();
+	void renderGame();
+	void gameRun();
 
 
 private:

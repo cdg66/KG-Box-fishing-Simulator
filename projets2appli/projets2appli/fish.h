@@ -1,10 +1,9 @@
 //#pragma once
 
-
+#include "coordinates.h"
 #ifndef FISH
 #define FISH
 
-#include "coordinates.h"
 
 class Fish
 {

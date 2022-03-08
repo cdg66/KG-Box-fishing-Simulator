@@ -19,27 +19,54 @@ void Grid::changeSize(int aSize)
     totalY = size;
 }
 
+void Grid::changeRodPos(int x, int y)
+{
+    if (x + xRod < size || y + yRod < size || x + xRod >= 0 || y + yRod >= 0) {
+        xRod += x;
+        if(xRod < 0) {
+            xRod = 0;
+        }
+        else if (xRod >= size)
+        {
+            xRod = size - 1;
+        }
+        yRod += y;
+        if (yRod < 0) {
+            yRod = 0;
+        }
+        else if (yRod >= size)
+        {
+            yRod = size - 1;
+        }
+    }
+
+}
+
 int Grid::getSize()
 {
     return size;
 }
 
-void Grid::render(GridObject obj, GridObject fish) {
+void Grid::render(GridObject fish) {
     
+    printTopLine();
     for (int col = 0; col < totalY; col++) {
+        cout << "|";
         for (int row = 0; row < totalX; row++) {
-            if (obj.x == row && obj.y == col) {
-                cout << "O";
+            if (col == yRod && row == xRod) {
+                cout << "X" << "|";
             }
-            else if (fish.x == row && fish.y == col){
-                cout << "F";
-            }
-            else {
-                cout << "-";
+            else if(fish.x == row && fish.y == col){
+                cout << "O" << "|";
+            } else {
+                cout << " " << "|";
+
             }
         }
-        cout << endl;
+        printTopLine();
     }
+
+
 }
 
 void Grid::renderGridOnly() {
@@ -47,7 +74,12 @@ void Grid::renderGridOnly() {
     for (int col = 0; col < totalY; col++) {
         cout << "|";
         for (int row = 0; row < totalX; row++) {
-            cout << " "<< "|";
+            if (col == yRod && row == xRod) {
+                cout << "X" << "|";
+            }
+            else {
+                cout << " " << "|";
+            }
         }
         printTopLine();
     }

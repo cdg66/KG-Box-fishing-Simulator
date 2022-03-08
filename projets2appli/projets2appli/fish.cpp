@@ -1,5 +1,4 @@
 #include "fish.h"
-#include "grid.h"
 
 #include <iostream>
 #include <random>
@@ -14,7 +13,7 @@ Fish::~Fish(){}
 void Fish::randomPosition(int max_size) 
 {
     std::default_random_engine generator;
-    std::uniform_real_distribution<int> distribution(0, (max_size - 1)); //int from 0 to max_size-1
+    std::uniform_int_distribution<int> distribution(0, (max_size - 1)); //int from 0 to max_size-1
 
     int random_x = distribution(generator);
     int random_y = distribution(generator);
@@ -26,7 +25,7 @@ void Fish::randomPosition(int max_size)
 void Fish::setMouvement()
 {
     std::default_random_engine generator;
-    std::uniform_real_distribution<int> distribution(-1, 1); //int from -1 to 1
+    std::uniform_int_distribution<int> distribution(-1, 1); //int from -1 to 1
 
     int random_number1 = distribution(generator);
     int random_number2 = distribution(generator);
