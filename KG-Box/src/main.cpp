@@ -44,9 +44,23 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   //test
+  int16_t Position[2] = {0,0}; //[X,Y]
   Encoder* myEnc = new Encoder(ENC_A, ENC_B);
+  Joystick* Joystick0 = new Joystick(JSTICK_A1, JSTICK_A2);
   while (1)
   {
+
+    Joystick0->Update();
+    Joystick0->GetArray(Position);
+
+    Serial.print("Joystick X: ");
+    Serial.print( Position[0]);
+    Serial.print(" ,");
+
+    Serial.print("Joystick Y: ");
+    Serial.print( Position[1]);
+    Serial.print(" ,");
+
     Serial.print("Bouton2: ");
     Serial.print(BOUTONSTATE(BTN2));
     Serial.print(" ,");

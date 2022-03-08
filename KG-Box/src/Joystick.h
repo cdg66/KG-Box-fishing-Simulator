@@ -19,6 +19,7 @@ public:
     ~Joystick();
     void Update();
     void GetVector(int16_t *Magnitude, float *Phase);
+    void GetArray(int16_t *TabPos);
 
 };
 
@@ -36,12 +37,14 @@ void Joystick::Update()
 {
    // lis le jstick
    Position[0] = analogRead(PinX);
+   Serial.print(Position[0]);
    Position[1] = analogRead(PinY);
+   Serial.print(Position[1]);
    // rend les valeurs Carthesiennes
-   Position[0] = CenterValue( Position[0], 0x7FF);
-   Position[1] = CenterValue( Position[1], 0x7FF);
+   //Position[0] = CenterValue( Position[0], 0x7FF);
+   //Position[1] = CenterValue( Position[1], 0x7FF);
    // rend les valeurs sous forme de vecteur
-   Vectorise(Position, 2, &MagnitudeJstick, &PhaseJstick);
+   //Vectorise(Position, 2, &MagnitudeJstick, &PhaseJstick);
 
 }
 void Joystick::GetVector(int16_t *Magnitude, float *Phase)
@@ -50,5 +53,8 @@ void Joystick::GetVector(int16_t *Magnitude, float *Phase)
     *Phase = PhaseJstick;
 }
 
-
+void Joystick::GetArray(int16_t *TabPos)
+{
+    *TabPos = &Position;
+}
 #endif
