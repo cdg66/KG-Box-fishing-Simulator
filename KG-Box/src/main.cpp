@@ -51,14 +51,14 @@ void loop() {
   {
 
     Joystick0->Update();
-    Joystick0->GetArray(Position);
+    //Joystick0->GetArray(Position);
 
     Serial.print("Joystick X: ");
-    Serial.print( Position[0]);
+    Serial.print( Joystick0->GetX());
     Serial.print(" ,");
 
     Serial.print("Joystick Y: ");
-    Serial.print( Position[1]);
+    Serial.print( Joystick0->GetY());
     Serial.print(" ,");
 
     Serial.print("Bouton2: ");
