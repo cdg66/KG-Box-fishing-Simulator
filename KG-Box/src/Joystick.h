@@ -42,8 +42,8 @@ void Joystick::Update()
    Position[1] = analogRead(PinY);
    //Serial.print(Position[1]);
    // rend les valeurs Carthesiennes
-   //Position[0] = CenterValue( Position[0], 0x7FF);
-   //Position[1] = CenterValue( Position[1], 0x7FF);
+   Position[0] = CenterValue( Position[0], 511);
+   Position[1] = CenterValue( Position[1], 511);
    // rend les valeurs sous forme de vecteur
    //Vectorise(Position, 2, &MagnitudeJstick, &PhaseJstick);
 
