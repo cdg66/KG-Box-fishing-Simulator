@@ -29,7 +29,7 @@ void Fish::randomPosition(int max_size)
     cord.y = rand() % max_size;
 }
 
-void Fish::setMouvement()
+void Fish::setMouvement(int max_size)
 {
     std::default_random_engine generator;
     std::uniform_int_distribution<int> distribution(-1, 1); //int from -1 to 1
@@ -37,26 +37,26 @@ void Fish::setMouvement()
     int random_number1 = distribution(generator);
     int random_number2 = distribution(generator);
 
-    int randomX = rand() % 2;
-    int randomY = rand() % 2;
-    if (randomY == 0 && randomX == 0){
+    int randomX = rand() % 3 + (-1);
+    int randomY = rand() % 3 + (-1);
+   /* if (randomY == 0 && randomX == 0){
         bool working = true;
         while (working) {
-            randomX = rand() % 2;
-            randomY = rand() % 2;
+            randomX = rand() % 2 + (-1);
+            randomY = rand() % 2 + (-1);
             if (randomY == 0 || randomX == 0) {
                 working = false;
             }
         }
-    }
-    cord.x = randomX;
-    cord.y = randomY;
+    }*/
+    cord.x = cord.x + randomX;
+    cord.y = cord.y + randomY;
 
     if (cord.x < 0)
     {
         cord.x = -cord.x;
     }
-    else if (cord.x > 3) {
+    else if (cord.x > max_size - 1) {
         cord.x -= 2;
     }
 
@@ -64,7 +64,7 @@ void Fish::setMouvement()
     {
         cord.y = -cord.y;
     }
-    else if (cord.y > 3) {
+    else if (cord.y > max_size - 1) {
         cord.y -= 2;
     }
 }

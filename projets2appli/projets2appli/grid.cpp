@@ -47,8 +47,8 @@ int Grid::getSize()
     return size;
 }
 
-void Grid::render(GridObject fish) {
-    
+bool Grid::render(GridObject fish) {
+    bool retour = false;
     printTopLine();
     for (int col = 0; col < totalY; col++) {
         cout << "|";
@@ -56,6 +56,7 @@ void Grid::render(GridObject fish) {
             if (col == yRod && row == xRod) {
                 if (fish.x == row && fish.y == col) {
                     cout << "A" << "|";
+                    retour = true;
                 }
                 else {
                     cout << "X" << "|";
@@ -69,7 +70,7 @@ void Grid::render(GridObject fish) {
         }
         printTopLine();
     }
-
+    return retour;
 
 }
 
@@ -97,16 +98,7 @@ void Grid::printTopLine() {
     cout << endl;
 }
 
-/*
-int main() {
-    Grid thisGrid{ 4,5 };
-    GridObject obj{ 1,1 };
-    //GridObject représente nimporte qu'elle autre affaire que la grid de base
-    // ex:  poisson, canne à peche.
-    // faut render la grid à chaque refresh pis system("cls"); pour clear la vue
-    thisGrid.Render(obj);
-}
-*/
+
 
 
 // {"JStick_X":-11533,"JStick_Y":-16495,"Bouton2":true,"Bouton3":true,"Bouton4":true,"Bouton5":true,"ACC_X":0,"ACC_Y":0,"ACC_Z":0,"Encodeur":327}

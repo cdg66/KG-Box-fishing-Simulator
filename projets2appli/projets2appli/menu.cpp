@@ -2,6 +2,8 @@
 #include <iostream>
 #include <stdio.h>
 #include <conio.h>
+#include <time.h>
+#include<windows.h>
 
 #define KEY_UP 72
 #define KEY_DOWN 80
@@ -166,9 +168,21 @@ void Menu::gameRun() {
 	cout << aFish.cord.x << aFish.cord.y << endl;
 	GridObject fish{ aFish.cord.x,aFish.cord.y };
 	gameGrid.render(fish);
+	fishingLoop(aFish, fish);
+}
 
-	// boucler SetMovement();
-	// check if both ==
+void Menu::fishingLoop(Fish aFish, GridObject fishObj) {
+	bool samePos = false;
+	int les2 = 0;
+	while (!samePos) {
+		system("cls");
+		aFish.setMouvement(gameGrid.getSize());
+		GridObject fish{ aFish.cord.x,aFish.cord.y };
+		samePos = gameGrid.render(fish);
+		Sleep(200);
+	}
+
+	cout << " Un poisson est au bout de votre ligne. Appuyez rapidement sur W pour l\'attrapper!!!" << endl;
 }
 
 void Menu::changeGrid(int aSize)

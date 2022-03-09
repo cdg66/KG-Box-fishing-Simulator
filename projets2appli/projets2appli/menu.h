@@ -15,6 +15,7 @@ public:
 	void show();
 	void renderGame();
 	void gameRun();
+	void fishingLoop(Fish aFish, GridObject fishObj);
 
 
 private:
