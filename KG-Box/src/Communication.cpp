@@ -9,7 +9,7 @@ StaticJsonDocument<500> docRecive;
 //#TODO  Add comm protocol
 /*---------------------------Definition de fonctions ------------------------*/
 
-void serialEvent() { shouldRead_ = true; }
+
 
 
 /*---------------------------Definition de fonctions ------------------------
@@ -66,8 +66,8 @@ void readMsg(uint8_t &segement_7, bool &mot){
   
   parse_msg = docRecive["7segement"];
   parse_msg = docRecive["Moteur"];
- segement_7 = docRecive["7segement"];
- mot = docRecive["Moteur"].as<bool>();
+  segement_7 = docRecive["7segement"];
+  mot = docRecive["Moteur"].as<bool>();
   // Analyse des éléments du message message
   //parse_msg = doc["led"];
   //if (!parse_msg.isNull()) {
