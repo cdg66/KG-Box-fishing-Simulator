@@ -9,6 +9,8 @@
 
 #define BAUD 9600        // Frequence de transmission serielle
 
+
+
 void setup() {
   // put your setup code here, to run once:
   //test_unitaire();
@@ -52,10 +54,25 @@ void loop() {
   bool mot = 0;
   Encoder* myEnc = new Encoder(ENC_A, ENC_B);
   Joystick* Joystick0 = new Joystick(JSTICK_A1, JSTICK_A2);
+  int16_t Acc_X = 0;
+  int16_t Acc_Y = 0;
+  int16_t Acc_Z = 0;
   while (1)
   {
 
     Joystick0->Update();
+    if (BOUTONSTATE(BTN1) == BTNON)
+    {
+      Acc_X = analogRead(ACC_X);
+      Acc_Y = analogRead(ACC_Y);
+      Acc_Z = analogRead(ACC_Z);
+    }
+    else
+    {
+      Acc_X = 0;
+      Acc_Y = 0;
+      Acc_Z = 0;
+    }
     //Joystick0->GetArray(Position);
 
     /*Serial.print("Joystick X: ");
@@ -88,8 +105,8 @@ void loop() {
     Serial.print(" \n");*/
 
 
-    //sendMsg(Joystick0->GetX(), Joystick0->GetY(), BOUTONSTATE(BTN2), BOUTONSTATE(BTN3), BOUTONSTATE(BTN4), BOUTONSTATE(JSTICK_BTN), 0, 0, 0, myEnc->read());
-    if (shouldRead_)
+    sendMsg(Joystick0->GetX(), Joystick0->GetY(), BOUTONSTATE(BTN2), BOUTONSTATE(BTN3), BOUTONSTATE(BTN4), BOUTONSTATE(JSTICK_BTN), Acc_X, Acc_Y, Acc_Z, myEnc->read());
+    if (Serial.available() )
     {
       Serial.print("Message Recu \n");
       readMsg(segement_7, mot);
@@ -100,3 +117,7 @@ void loop() {
 
   }
 }
+
+void serialEvent() { 
+  //Serial.print("toggle\n");
+  shouldRead_ = true; }
