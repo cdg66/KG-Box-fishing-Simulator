@@ -18,7 +18,7 @@
 
 #define sA1         25
 #define sB1          27
-#define C1          29
+#define C1          52
 #define D1          31
 #define E1          33
 #define F1          35
