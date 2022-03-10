@@ -1,4 +1,4 @@
-#include "menu.h"
+﻿#include "menu.h"
 #include <iostream>
 #include <stdio.h>
 #include <conio.h>
@@ -17,6 +17,10 @@
 #define KEY_S 115
 #define KEY_UPPER_D 68
 #define KEY_D 100
+#define KEY_UPPER_O 79
+#define KEY_O 111
+#define KEY_UPPER_N 78
+#define KEY_N 110
 using namespace std;
 Menu::Menu()
 {
@@ -30,7 +34,7 @@ Menu::~Menu()
 void Menu::changeSettings()
 {
 	cout << "Voici les reglages du jeu" << endl;
-	cout << "Valeurs actuelles : \nDifficulte : " << /*PRINT DIF*/ "\n" << "Grosseur du tableau : " << /*PRINT SIZE*/ "\n" << endl;
+	cout << "Valeurs actuelles : \nDifficulte : " << /*PRINT DIF*/" N/A " "\n" << "Grosseur du tableau : " << gameGrid.getSize() << " X " << gameGrid.getSize() <<"\n" << endl;
 	cout << "\n Liste des difficultes : \n 1. Facile \n 2. Normal \n 3. Difficile \n" << endl;
 	cout << "\n Liste des grandeurs : \n 4. 4 X 4 \n 5. 5 X 5 \n 6. 7 X 7 \n" << endl;
 	cout << "7. Retourner au menu principal" << endl;
@@ -182,7 +186,55 @@ void Menu::fishingLoop(Fish aFish, GridObject fishObj) {
 		Sleep(200);
 	}
 
+
 	cout << " Un poisson est au bout de votre ligne. Appuyez rapidement sur W pour l\'attrapper!!!" << endl;
+	int countdown = 0;
+	int hitCount = 0;
+
+	while (hitCount < 25) {
+		//wait pour hit //
+		// 87 & 119 //
+		int c = 0;
+		switch ((c = _getch())) {
+			case KEY_UPPER_W:
+			case KEY_W:
+				hitCount++;
+				break;
+		}
+		Sleep(20);
+		//countdown++;
+	}
+	int result = rand() % 4;
+	if (result == 1) {
+		//manqué
+		cout << "Oh non le poisson s\'est echappe! Voulez vous continuer votre peche? O ou N";
+	}
+	else {
+		// attraper
+		cout << "Vous avez attrape un poisson! Voulez vous continuer votre peche? O ou N";
+	}
+	int c = 0;
+	bool stopping = true;
+	while(stopping)
+	switch ((c = _getch())) {
+		case KEY_UPPER_O:
+		case KEY_O:
+			//action
+			system("cls");
+			start();
+			stopping = false;
+			break;
+		case KEY_UPPER_N:
+		case KEY_N:
+			//action non
+			stopping = false;
+			system("cls");
+			show();
+			break;
+		default:
+			break;
+	}
+
 }
 
 void Menu::changeGrid(int aSize)
@@ -195,18 +247,27 @@ void Menu::show()
 {
 
 	cout << R"(
-      _______
- ,-~~~       ~~~-,
-(                 )
- \_-, , , , , ,-_/
-    / / | | \ \
-    | | | | | |
-    | | | | | |
-   / / /   \ \ \
-   | | |   | | |
-)" << "\n" << endl;
 
-	cout << "Fishing Game" << endl;
+                                          _.'.__
+                                       _.'      .
+                 ':'.               .''   __ __  .
+                   '.:._          ./  _ ''     "-'.__
+                 .'''-: """-._    | .                "-"._
+                  '.     .    "._.'                       "
+                     '.   "-.___ .        .'          .  :o'.
+                       |   .----  .      .           .'     (
+                        '|  ----. '   ,.._                _-'
+                         .' .---  |.""  .-:;.. _____.----'
+                         |   .-""""    |      '
+                       .'  _'         .'    _'
+                      |_.-'            '-.'
+ ______  __  ______  __  __  __  __   __  ______       ______  ______  __    __  ______    
+/\  ___\/\ \/\  ___\/\ \_\ \/\ \/\ "-.\ \/\  ___\     /\  ___\/\  __ \/\ "-./  \/\  ___\   
+\ \  __\\ \ \ \___  \ \  __ \ \ \ \ \-.  \ \ \__ \    \ \ \__ \ \  __ \ \ \-./\ \ \  __\   
+ \ \_\   \ \_\/\_____\ \_\ \_\ \_\ \_\\"\_\ \_____\    \ \_____\ \_\ \_\ \_\ \ \_\ \_____\ 
+  \/_/    \/_/\/_____/\/_/\/_/\/_/\/_/ \/_/\/_____/     \/_____/\/_/\/_/\/_/  \/_/\/_____/ 
+)" << "\n" << endl;
+	cout << "=============================================================================================" << endl;
 	cout << "Naviguer en utilisant le chiffre approprie" << endl;
 	cout << "  1. Commencer une nouvelle partie avec les reglages definis \n  2. Modifier les reglages \n" << endl;
 	cout << "Hall of Fame" << endl;
