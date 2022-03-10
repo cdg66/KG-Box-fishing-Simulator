@@ -114,7 +114,7 @@ void Menu::start()
 
 void Menu::renderGame() {
 	int choice;
-	cout << "Utiliser les touches WASD afin de deplacer votre ligne dans l\'espace pour pecher et appuyer sur \"Entre\" pour confirmer";
+	cout << "Utiliser les touches WASD afin de deplacer votre ligne dans l\'espace pour pecher et appuyer sur \"Espace\" pour confirmer";
 	bool moving = true;
 	int  c;
 	while  (moving == true)

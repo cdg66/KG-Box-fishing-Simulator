@@ -1,4 +1,1 @@
-﻿  menu.cpp
-C:\Users\emile\Desktop\S2_code_joel\projets2appli\projets2appli\menu.cpp(116,6): warning C4101: 'choice': unreferenced local variable
-C:\Users\emile\Desktop\S2_code_joel\projets2appli\projets2appli\menu.cpp(169,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  projets2appli.vcxproj -> C:\Users\emile\Desktop\S2_code_joel\projets2appli\Debug\projets2appli.exe
+﻿  projets2appli.vcxproj -> C:\Users\emile\Desktop\S2_code_joel\projets2appli\Debug\projets2appli.exe

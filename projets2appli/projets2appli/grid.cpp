@@ -55,7 +55,7 @@ bool Grid::render(GridObject fish) {
         for (int row = 0; row < totalX; row++) {
             if (col == yRod && row == xRod) {
                 if (fish.x == row && fish.y == col) {
-                    cout << "A" << "|";
+                    cout << "¢" << "|";
                     retour = true;
                 }
                 else {
