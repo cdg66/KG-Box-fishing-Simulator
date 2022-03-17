@@ -22,7 +22,7 @@ public:
 	void randomPosition(int max_size); //génère une coordonnee random
 	void setMouvement(int max_size); //modifie la coordonnee instanciee
 	void dessinPoisson(); //met le poisson sur la grille
-	int difficulte(int type_fish); //indique a quel point il est difficile d'attraper un poisson
+	int difficulte(); //indique a quel point il est difficile d'attraper un poisson
 };
 
 #endif

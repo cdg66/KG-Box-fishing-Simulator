@@ -186,12 +186,12 @@ void Menu::fishingLoop(Fish aFish, GridObject fishObj) {
 		Sleep(200);
 	}
 
-
-	cout << " Un poisson est au bout de votre ligne. Appuyez rapidement sur W pour l\'attrapper!!!" << endl;
+	int rotations = aFish.difficulte();
+	cout << " Un poisson est au bout de votre ligne. Appuyez " << rotations << " fois sur W pour l\'attrapper!!!" << endl;
 	int countdown = 0;
 	int hitCount = 0;
 
-	while (hitCount < 25) {
+	while (hitCount < rotations) {
 		//wait pour hit //
 		// 87 & 119 //
 		int c = 0;

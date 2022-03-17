@@ -66,23 +66,23 @@ void Fish::dessinPoisson()
     //grid[cord.x][cord.y] = "O";
 }
 
-int Fish::difficulte(int type_fish)
+int Fish::difficulte()
 {
     int a, b; //interval de nb de reel a realiser
 
     switch (type_fish)
     {
-    case 1:
+    case 0:
         a = 10;
         b = 20;
         break;
 
-    case 2:
+    case 1:
         a = 20;
         b = 30;
         break;
 
-    case 3:
+    case 2:
         a = 30;
         b = 40;
         break;
