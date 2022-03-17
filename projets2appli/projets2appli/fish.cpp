@@ -39,16 +39,7 @@ void Fish::setMouvement(int max_size)
 
     int randomX = rand() % 3 + (-1);
     int randomY = rand() % 3 + (-1);
-   /* if (randomY == 0 && randomX == 0){
-        bool working = true;
-        while (working) {
-            randomX = rand() % 2 + (-1);
-            randomY = rand() % 2 + (-1);
-            if (randomY == 0 || randomX == 0) {
-                working = false;
-            }
-        }
-    }*/
+
     cord.x = cord.x + randomX;
     cord.y = cord.y + randomY;
 
@@ -75,21 +66,31 @@ void Fish::dessinPoisson()
     //grid[cord.x][cord.y] = "O";
 }
 
-
-
-
-
-
-
-/*#include "fish.h"
-#include <stdlib.h>
-Fish::Fish()
+int Fish::difficulte(int type_fish)
 {
-	speed = rand() % 10 + 1;
-	score = rand() % 10 + 1;
-}
+    int a, b; //interval de nb de reel a realiser
 
-Fish::~Fish()
-{
+    switch (type_fish)
+    {
+    case 1:
+        a = 10;
+        b = 20;
+        break;
+
+    case 2:
+        a = 20;
+        b = 30;
+        break;
+
+    case 3:
+        a = 30;
+        b = 40;
+        break;
+    }
+    std::default_random_engine generator;
+    std::uniform_int_distribution<int> distribution(a, b); 
+
+    int rand_revolution = distribution(generator); //nb de révolutions pour attraper le poisson
+
+    return rand_revolution;
 }
-*/

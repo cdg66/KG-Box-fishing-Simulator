@@ -1,1 +1,8 @@
-﻿  projets2appli.vcxproj -> C:\Users\emile\Desktop\S2_code_joel\projets2appli\Debug\projets2appli.exe
+﻿  appliS2.cpp
+  fish.cpp
+  menu.cpp
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\projets2appli\projets2appli\menu.cpp(116,6): warning C4101: 'choice' : variable locale non référencée
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\projets2appli\projets2appli\menu.cpp(169,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+  Génération de code en cours...
+  LINK : C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\projets2appli\Debug\projets2appli.exe introuvable ou non généré par la dernière édition de liens incrémentielle ; édition de liens complète en cours
+  projets2appli.vcxproj -> C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\projets2appli\Debug\projets2appli.exe
