@@ -20,16 +20,16 @@ Traitement : Envoi du message
 -----------------------------------------------------------------------------*/
 void sendMsg(int16_t JStick_X, int16_t JStick_Y, bool Btn2, bool Btn3, bool Btn4, bool Btn5, int16_t ACC_X, int16_t ACC_Y, int16_t ACC_Z, long Encodeur) {
   // Elements du message
-  docSend["JStick_X"] = JStick_X;
-  docSend["JStick_Y"] = JStick_Y;
-  docSend["Bouton2"] = Btn2;
-  docSend["Bouton3"] = Btn3;
-  docSend["Bouton4"] = Btn4;
-  docSend["Bouton5"] = Btn5;
-  docSend["ACC_X"] = ACC_X;
-  docSend["ACC_Y"] = ACC_Y;
-  docSend["ACC_Z"] = ACC_Z;
-  docSend["Encodeur"] = Encodeur;
+  docSend["JX"] = JStick_X;
+  docSend["JY"] = JStick_Y;
+  docSend["2"] = Btn2;
+  docSend["3"] = Btn3;
+  docSend["4"] = Btn4;
+  docSend["5"] = Btn5;
+  docSend["X"] = ACC_X;
+  docSend["Y"] = ACC_Y;
+  docSend["Z"] = ACC_Z;
+  docSend["E"] = Encodeur;
   
   // Serialisation
   serializeJson(docSend, Serial);

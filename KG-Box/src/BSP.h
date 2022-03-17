@@ -38,6 +38,6 @@
 #define BTN4        28
 #define BTNON       0
  
-#define MOTEUR      29 // not fixed
+#define MOTEUR      34 // not fixed
 
 #endif
