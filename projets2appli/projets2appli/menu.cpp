@@ -270,8 +270,11 @@ void Menu::show()
 	cout << "=============================================================================================" << endl;
 	cout << "Naviguer en utilisant le chiffre approprie" << endl;
 	cout << "  1. Commencer une nouvelle partie avec les reglages definis \n  2. Modifier les reglages \n" << endl;
-	cout << "Hall of Fame" << endl;
-	cout << /*print de classement ici*/"\n" << endl;
+	cout << "HALL OF FAME" << endl << endl;
+
+	Leaderboards lead;
+	lead.writeScore(2000, "Lucyle");
+	lead.readScore(); //print le classement
 	
 
 	// switch case pour l'option choisie //
