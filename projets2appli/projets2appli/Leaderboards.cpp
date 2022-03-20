@@ -3,7 +3,10 @@
 #include <fstream>
 #include <iostream>
 #include <string>
+#include "json.hpp"
 
+
+using json = nlohmann::json;
 using namespace std;
 
 Leaderboards::Leaderboards(){}
@@ -57,20 +60,22 @@ bool Leaderboards::verifyLines(string nom)
 
 bool Leaderboards::readScore()
 {
-	
-	fstream fichier;
-	string text;
-	fichier.open("Leaderboards.txt", ios::in);
-	if (fichier.is_open())
+
+	fstream ifile("Leaderboards.json", ifstream::in);
+
+	if (ifile.is_open())
 	{
+		ifile >> file_json;
+
 		cout << "NOM" << " | " << "SCORES" << endl;
 		cout << "----------------------" << endl;
 
-		while (getline(fichier, text))
+		for (auto it = file_json.begin(); it != file_json.end(); ++it)
 		{
-			cout << text << endl;
+			cout << "|" << it.key() << " | " << it.value() << "|" << '\n';
+			cout << "----------------------" << endl;
 		}
-		fichier.close();
+		ifile.close();
 		return true;
 	}
 	return false;
@@ -78,17 +83,21 @@ bool Leaderboards::readScore()
 
 bool Leaderboards::writeScore(int score, string nom)
 {
-	ofstream fichier;
+	fstream ifile("Leaderboards.json", ifstream::in);
+	ifile >> file_json;
+	ifile.close();
+
+	ofstream ofile("Leaderboards.json", ofstream::out);
 
 	switch (is_ascii(nom))
 	{
 	case 0:
-		fichier.open("Leaderboards.txt", ios_base::app);
-		if (fichier.is_open())
+		if (ofile.is_open())
 		{
-			fichier << "|" << nom << " | " << to_string(score) << "|" << endl;
-			fichier << "----------------------" << endl;
-			fichier.close();
+			file_json[nom] = score;
+			ofile << file_json;
+
+			ofile.close();
 			return true;
 		}
 		return false;

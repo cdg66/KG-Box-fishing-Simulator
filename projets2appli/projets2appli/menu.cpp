@@ -273,7 +273,8 @@ void Menu::show()
 	cout << "HALL OF FAME" << endl << endl;
 
 	Leaderboards lead;
-	lead.writeScore(2000, "Lucyle");
+
+	lead.writeScore(2000, "Amelie");
 	lead.readScore(); //print le classement
 	
 
