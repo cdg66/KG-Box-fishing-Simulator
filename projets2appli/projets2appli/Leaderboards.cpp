@@ -9,9 +9,9 @@
 using json = nlohmann::json;
 using namespace std;
 
-Leaderboards::Leaderboards(){}
+Leaderboards::Leaderboards() {}
 
-Leaderboards::~Leaderboards(){}
+Leaderboards::~Leaderboards() {}
 
 int Leaderboards::is_ascii(string nom)
 {
@@ -41,7 +41,6 @@ bool Leaderboards::verifyLines(string nom)
 	string text;
 	int len = nom.length();
 	int flag = 0;
-
 	fichier.open("Leaderboards.txt", ios::in);
 	if (fichier.is_open())
 	{
@@ -49,7 +48,7 @@ bool Leaderboards::verifyLines(string nom)
 		{
 			if (text.subs(1, len + 1) == nom)
 			{
-				
+
 			}
 		}
 		fichier.close();

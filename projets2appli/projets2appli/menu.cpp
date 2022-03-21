@@ -274,7 +274,7 @@ void Menu::show()
 
 	Leaderboards lead;
 
-	lead.writeScore(2000, "Amelie");
+	lead.writeScore(1, "Paul");
 	lead.readScore(); //print le classement
 	
 
