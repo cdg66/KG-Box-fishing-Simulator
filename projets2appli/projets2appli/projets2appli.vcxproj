@@ -150,6 +150,7 @@
     <ClInclude Include="fish.h" />
     <ClInclude Include="grid.h" />
     <ClInclude Include="gridObject.h" />
+    <ClInclude Include="json.hpp" />
     <ClInclude Include="leaderboards.h" />
     <ClInclude Include="menu.h" />
   </ItemGroup>
