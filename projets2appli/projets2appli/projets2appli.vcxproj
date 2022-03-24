@@ -143,6 +143,7 @@
     <ClCompile Include="fish.cpp" />
     <ClCompile Include="grid.cpp" />
     <ClCompile Include="Leaderboards.cpp" />
+    <ClCompile Include="leurres.cpp" />
     <ClCompile Include="menu.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -152,6 +153,7 @@
     <ClInclude Include="gridObject.h" />
     <ClInclude Include="json.hpp" />
     <ClInclude Include="leaderboards.h" />
+    <ClInclude Include="leurres.h" />
     <ClInclude Include="menu.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
