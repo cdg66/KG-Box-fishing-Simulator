@@ -1,4 +1,4 @@
 ﻿  menu.cpp
-C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\projets2appli\projets2appli\menu.cpp(116,6): warning C4101: 'choice' : variable locale non référencée
-C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\projets2appli\projets2appli\menu.cpp(169,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\projets2appli\projets2appli\menu.cpp(158,6): warning C4101: 'choice' : variable locale non référencée
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\projets2appli\projets2appli\menu.cpp(216,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
   projets2appli.vcxproj -> C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\projets2appli\Debug\projets2appli.exe
