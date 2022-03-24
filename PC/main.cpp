@@ -46,19 +46,21 @@ int main() {
     int led_state = 1;
     int pot_value = 0;
      
-    int nombre = 0 ; 
+    int nombre = 0 ;
+    int etat = 0;  
     
     cout << "entrer le nombre a afficher"  << endl;
     cin >> nombre;
-    //uint8_t output = (uint8_t)led1<<4 ;
-    //cout <<  led1;
+    cout << "entrer etat moteur" << endl;
+    cin >> etat; 
+    
     json j_msg_send, j_msg_rcv;
 
     // Boucle infinie pour la communication bidirectionnelle Arduino-PC
     while(1) {
         
         j_msg_send["7segement"] = nombre;      // Création du message à envoyer
-        j_msg_send["Moteur"] = false;
+        j_msg_send["Moteur"] = true;
         
         //cout << j_msg_send;
 
