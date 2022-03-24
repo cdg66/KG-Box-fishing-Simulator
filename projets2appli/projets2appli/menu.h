@@ -10,7 +10,7 @@ class Menu {
 public:
 	Menu();
 	~Menu();
-	void Reset_with_score(int increment);
+	void Reset_with_score(bool increment);
 	void registerPlayer();
 	void changeSettings();
 	void start();

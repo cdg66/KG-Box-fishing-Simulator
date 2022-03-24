@@ -103,6 +103,8 @@ bool Leaderboards::writeScore(int score, string nom)
 		break;
 
 	case 1:
+		ofile << file_json;
+		ofile.close();
 		cout << "Erreur: le nom contient des caracteres speciaux, reecrivez celui-ci en ascii seulement" << endl;
 		break;
 	}
