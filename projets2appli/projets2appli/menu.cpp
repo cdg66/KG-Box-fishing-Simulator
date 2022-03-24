@@ -52,8 +52,6 @@ void Menu::registerPlayer()
 			cout << "\n\n" << "Veuillez inscrire votre nom (sans accents)" << endl;
 			cin >> nom;
 		} while (lead.is_ascii(nom) != 0);
-		
-		
 
 		lead.writeScore(Score, nom);
 		Score = 0;
