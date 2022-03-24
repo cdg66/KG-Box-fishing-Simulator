@@ -59,8 +59,8 @@ void loop() {
   int16_t Acc_Y = 0;
   int16_t Acc_Z = 0;
   //init moteur
-  //pinMode(MOTEUR, OUTPUT);
-  //digitalWrite(MOTEUR, 0);
+  pinMode(MOTEUR, OUTPUT);
+  digitalWrite(MOTEUR, 0);
    while(1)
    {  
 
