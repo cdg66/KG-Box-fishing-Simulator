@@ -10,6 +10,8 @@ class Menu {
 public:
 	Menu();
 	~Menu();
+	void Reset_with_score(int increment);
+	void registerPlayer();
 	void changeSettings();
 	void start();
 	void changeGrid(int aSize);
@@ -21,6 +23,7 @@ public:
 
 private:
 	Grid gameGrid;
+	int Score = 0;
 	// struct pour les coordinates
 
 };

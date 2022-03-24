@@ -1,13 +1,4 @@
-﻿  appliS2.cpp
-  fish.cpp
-  grid.cpp
-  Leaderboards.cpp
-C:\Users\emile\Desktop\bonCode\projets2appli\projets2appli\Leaderboards.cpp(19,20): warning C4018: '<': signed/unsigned mismatch
-  leurres.cpp
-  menu.cpp
-C:\Users\emile\Desktop\bonCode\projets2appli\projets2appli\menu.cpp(116,6): warning C4101: 'choice': unreferenced local variable
-C:\Users\emile\Desktop\bonCode\projets2appli\projets2appli\menu.cpp(169,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Generating Code...
-C:\Users\emile\Desktop\bonCode\projets2appli\projets2appli\Leaderboards.cpp(109): warning C4715: 'Leaderboards::writeScore': not all control paths return a value
-  LINK : C:\Users\emile\Desktop\bonCode\projets2appli\Debug\projets2appli.exe not found or not built by the last incremental link; performing full link
-  projets2appli.vcxproj -> C:\Users\emile\Desktop\bonCode\projets2appli\Debug\projets2appli.exe
+﻿  menu.cpp
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\projets2appli\projets2appli\menu.cpp(158,6): warning C4101: 'choice' : variable locale non référencée
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\projets2appli\projets2appli\menu.cpp(216,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+  projets2appli.vcxproj -> C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\projets2appli\Debug\projets2appli.exe

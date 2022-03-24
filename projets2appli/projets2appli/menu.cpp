@@ -22,6 +22,47 @@
 #define KEY_UPPER_N 78
 #define KEY_N 110
 using namespace std;
+
+void Menu::Reset_with_score(int increment) {
+	system("cls");
+	if (increment == 0) {
+		Score += 1;
+		cout << "\n" << "SCORE: " << to_string(Score) << endl;
+	}
+	else if (increment == 1) {
+		cout << "\n" << "SCORE: " << to_string(Score) << endl;
+	}
+	
+}
+
+void Menu::registerPlayer()
+{
+	int c = 0;
+	string nom;
+	Leaderboards lead;
+
+	cout << "\n\n" << "Voulez - vous enregistrer votre score ? O ou N" << endl;
+
+	switch ((c = _getch())) {
+	case KEY_UPPER_O:
+	case KEY_O:
+		cout << "\n\n" << "Veuillez inscrire votre nom (sans accents)" << endl;
+		cin >> nom;
+		lead.writeScore(Score, nom);
+		Score = 0;
+		cout << "\n\n" << "Score enregistre, merci d'avoir joue!" << endl;
+		break;
+	case KEY_UPPER_N:
+	case KEY_N:
+		Score = 0;
+		cout << "\n\n" << "Le score n'a pas ete enregistre, merci d'avoir joue!" << endl;
+		break;
+	default:
+		break;
+	}
+}
+
+
 Menu::Menu()
 {
 	show();
@@ -40,6 +81,7 @@ void Menu::changeSettings()
 	cout << "7. Retourner au menu principal" << endl;
 
 	int choice;
+
 	cin >> choice;
 	switch (choice)
 	{
@@ -124,33 +166,38 @@ void Menu::renderGame() {
 		switch ((c = _getch())) {
 		case KEY_UPPER_W:
 		case KEY_W:
-			system("cls");
+			//system("cls");
+			Reset_with_score(1);
 			gameGrid.changeRodPos(0,-1);
 			gameGrid.renderGridOnly();
 
 			break;
 		case KEY_UPPER_A:
 		case KEY_A:
-			system("cls");
+			//system("cls");
+			Reset_with_score(1);
 			gameGrid.changeRodPos(-1, 0);
 			gameGrid.renderGridOnly();
 
 			break;
 		case KEY_UPPER_S:
 		case KEY_S:
-			system("cls");
+			//system("cls");
+			Reset_with_score(1);
 			gameGrid.changeRodPos(0,1);
 			gameGrid.renderGridOnly();
 
 			break;
 		case KEY_UPPER_D:
 		case KEY_D:
-			system("cls");
+			//system("cls");
+			Reset_with_score(1);
 			gameGrid.changeRodPos(1,0);
 			gameGrid.renderGridOnly();
 			break;
 		case 32:
-			system("cls");
+			//system("cls");
+			Reset_with_score(1);
 			//fish apparait
 			moving = false;
 			break;
@@ -176,10 +223,14 @@ void Menu::gameRun() {
 }
 
 void Menu::fishingLoop(Fish aFish, GridObject fishObj) {
+	
 	bool samePos = false;
 	int les2 = 0;
 	while (!samePos) {
-		system("cls");
+		//system("cls");
+		Reset_with_score(1);
+
+
 		aFish.setMouvement(gameGrid.getSize());
 		GridObject fish{ aFish.cord.x,aFish.cord.y };
 		samePos = gameGrid.render(fish);
@@ -208,10 +259,13 @@ void Menu::fishingLoop(Fish aFish, GridObject fishObj) {
 	if (result == 1) {
 		//manqué
 		cout << "Oh non le poisson s\'est echappe! Voulez vous continuer votre peche? O ou N";
+
 	}
 	else {
 		// attraper
+		Reset_with_score(0);
 		cout << "Vous avez attrape un poisson! Voulez vous continuer votre peche? O ou N";
+
 	}
 	int c = 0;
 	bool stopping = true;
@@ -220,15 +274,18 @@ void Menu::fishingLoop(Fish aFish, GridObject fishObj) {
 		case KEY_UPPER_O:
 		case KEY_O:
 			//action
-			system("cls");
+			//system("cls");
+			Reset_with_score(1);
 			start();
 			stopping = false;
 			break;
 		case KEY_UPPER_N:
 		case KEY_N:
 			//action non
+			registerPlayer();
 			stopping = false;
 			system("cls");
+			//Reset_with_score(S.score);
 			show();
 			break;
 		default:
@@ -274,7 +331,6 @@ void Menu::show()
 
 	Leaderboards lead;
 
-	lead.writeScore(1, "Paul");
 	lead.readScore(); //print le classement
 	
 
