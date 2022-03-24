@@ -4,6 +4,7 @@
 #include "grid.h"
 #include "leaderboards.h"
 #include "coordinates.h"
+#include "leurres.h"
 class Menu {
 
 public:
