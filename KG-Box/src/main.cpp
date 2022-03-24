@@ -7,7 +7,7 @@
 #include "Bouton.h"
 #include "Communication.h"
 
-#define BAUD 115200      // Frequence de transmission serielle
+#define BAUD 460800       // Frequence de transmission serielle
 
 
 
@@ -15,6 +15,7 @@ void setup() {
   // put your setup code here, to run once:
   //test_unitaire();
   Serial.begin(BAUD);
+  
   //Enc* Encodeur0 = new Enc (ENC_A, ENC_B);
   
   
@@ -59,10 +60,10 @@ void loop() {
   int16_t Acc_Y = 0;
   int16_t Acc_Z = 0;
   //init moteur
-  //pinMode(MOTEUR, OUTPUT);
-  //digitalWrite(MOTEUR, 0);
-   while(1)
-   {  
+  pinMode(MOTEUR, OUTPUT);
+  digitalWrite(MOTEUR, 0);
+  while (1)
+  {
 
     Joystick0->Update();
     if (BOUTONSTATE(BTN1) == BTNON)
@@ -81,9 +82,8 @@ void loop() {
     
 
     
-    if (Serial.available())
+    if (Serial.available() )
     {
-      //Serial.write(Serial.read());
       //Serial.print("Message Recu \n");
       readMsg(segement_7, mot);
       unite = segement_7%10;
@@ -92,8 +92,6 @@ void loop() {
       seg1->write(Diz);
       digitalWrite(MOTEUR, mot);
       sendMsg(Joystick0->GetX(), Joystick0->GetY(), BOUTONSTATE(BTN2), BOUTONSTATE(BTN3), BOUTONSTATE(BTN4), BOUTONSTATE(JSTICK_BTN), Acc_X, Acc_Y, Acc_Z, myEnc->read());
-      //Serial.flush();
-      //Serial.print(sizeof(Serial.available()));
     }
     delay(10);
     //sendMsg(Joystick0->GetX(), Joystick0->GetY(), BOUTONSTATE(BTN2), BOUTONSTATE(BTN3), BOUTONSTATE(BTN4), BOUTONSTATE(JSTICK_BTN), Acc_X, Acc_Y, Acc_Z, myEnc->read());
