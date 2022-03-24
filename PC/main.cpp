@@ -15,7 +15,7 @@ using namespace std;
 using json = nlohmann::json;
 
 /*------------------------------ Constantes ---------------------------------*/
-#define BAUD 9600           // Frequence de transmission serielle
+#define BAUD 115200           // Frequence de transmission serielle
 #define MSG_MAX_SIZE 1024   // Longueur maximale d'un message
 
 
@@ -60,9 +60,9 @@ int main() {
     while(1) {
         
         j_msg_send["7segement"] = nombre;      // Création du message à envoyer
-        j_msg_send["Moteur"] = true;
+        j_msg_send["Moteur"] = etat;
         
-        //cout << j_msg_send;
+        //cout << j_msg_send << endl;
 
         if(!SendToSerial(arduino, j_msg_send)) {    //Envoie au Arduino
             cerr << "Erreur lors de l'envoie du message. " << endl;
@@ -78,14 +78,14 @@ int main() {
         // Impression du message de l'Arduino, si valide
         if(raw_msg.size()>0) {
              j_msg_rcv = json::parse(raw_msg);       // Transfert du message en json
-            pot_value = j_msg_rcv["JStick_X"];        // Transfert dans la variable pot_value
-             cout << "Message de l'Arduino: " << j_msg_rcv << "valX ="<< pot_value <<endl;
+            pot_value = j_msg_rcv["JX"];        // Transfert dans la variable pot_value
+            cout << j_msg_rcv << "\r"; 
         }
         
         //led_state = !led_state;     //Changement de l'etat led
 
         // Bloquer le fil pour environ 1 sec
-        Sleep(500); // 1000ms
+        Sleep(50); // 1000ms
     }
     return 0;
 }
