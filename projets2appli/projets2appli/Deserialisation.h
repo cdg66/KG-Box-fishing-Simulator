@@ -22,8 +22,8 @@ public:
 	void SetMoteur(bool Moteur);
 	bool GetMoteur();
 private:
-	uint8_t Seg;
-	bool Mot;
+	uint8_t Seg = 0;
+	bool Mot = false;
 	string Com;
 	bool RcvFromSerial(SerialPort* arduino, string& msg);
 	bool  SendToSerial(SerialPort* arduino, json j_msg);
@@ -66,7 +66,7 @@ void Serialisation::SetSegement(uint8_t Segement)
 
 json Serialisation::SerialUpdate()
 {
-	string raw_msg;
+	string raw_msg = " ";
 	json j_msg_send, j_msg_rcv;
 
 	j_msg_send["7segement"] = Seg;      // Création du message à envoyer
@@ -118,6 +118,7 @@ bool Serialisation::RcvFromSerial(SerialPort* arduino, string& msg) {
 	int buffer_size;
 
 	msg.clear(); // clear string
+	msg = " ";
 	// Read serialport until '\n' character (Blocking)
 	while (msg.back() != '\n') {
 		if (msg.size() > MSG_MAX_SIZE) {
