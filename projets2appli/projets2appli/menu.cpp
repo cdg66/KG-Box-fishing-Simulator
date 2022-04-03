@@ -71,11 +71,13 @@ void Menu::registerPlayer()
 
 Menu::Menu()
 {
+	com = new Serialisation("com3");
 	show();
 }
 
 Menu::~Menu()
 {
+	delete com;
 }
 
 void Menu::changeSettings()

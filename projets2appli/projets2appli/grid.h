@@ -1,3 +1,4 @@
+#pragma once
 #include "gridObject.h"
 class Grid {
 

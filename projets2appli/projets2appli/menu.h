@@ -1,10 +1,11 @@
-
+#pragma once
 #define MENU_H
 #include "fish.h"
 #include "grid.h"
 #include "leaderboards.h"
 #include "coordinates.h"
 #include "leurres.h"
+#include "Deserialisation.h"
 class Menu {
 
 public:
@@ -26,4 +27,6 @@ private:
 	int Score = 0;
 	// struct pour les coordinates
 
+	// objet pour la communication
+	Serialisation* com;
 };
