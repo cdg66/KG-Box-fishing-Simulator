@@ -248,6 +248,8 @@ void Menu::fishingLoop(Fish aFish, GridObject fishObj) {
 	}
 
 	int rotations = aFish.difficulte();
+	com->SetMoteur(true);
+	com->SerialUpdate();
 	cout << " Un poisson est au bout de votre ligne. Appuyez " << rotations << " fois sur W pour l\'attrapper!!!" << endl;
 	int countdown = 0;
 	int hitCount = 0;
@@ -274,6 +276,8 @@ void Menu::fishingLoop(Fish aFish, GridObject fishObj) {
 	else {
 		// attraper
 		Reset_with_score(true);
+		com->SetMoteur(false);
+		com->SerialUpdate();
 		cout << "Vous avez attrape un poisson! Voulez vous continuer votre peche? O ou N";
 
 	}
