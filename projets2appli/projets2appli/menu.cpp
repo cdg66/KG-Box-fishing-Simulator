@@ -270,6 +270,8 @@ void Menu::fishingLoop(Fish aFish, GridObject fishObj) {
 	int result = rand() % 4;
 	if (result == 1) {
 		//manqué
+		com->SetMoteur(false);
+		com->SerialUpdate();
 		cout << "Oh non le poisson s\'est echappe! Voulez vous continuer votre peche? O ou N";
 
 	}
