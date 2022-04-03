@@ -20,6 +20,7 @@ public:
 	void renderGame();
 	void gameRun();
 	void fishingLoop(Fish aFish, GridObject fishObj);
+	uint8_t jstickToKeyboard();
 
 
 private:
@@ -29,4 +30,5 @@ private:
 
 	// objet pour la communication
 	Serialisation* com;
+	json manette;
 };
