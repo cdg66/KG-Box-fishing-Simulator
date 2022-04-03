@@ -46,7 +46,30 @@ void Menu::registerPlayer()
 
 	cout << "\n\n" << "Voulez - vous enregistrer votre score ? O ou N" << endl;
 
-	switch ((c = _getch())) {
+	manette = com->SerialUpdate();
+	while ((manette["2"] == 1) && (manette["4"] == 1))
+	{
+		manette = com->SerialUpdate();
+		Sleep(20);
+	}
+	if (manette["2"] == 0) {
+		do
+		{
+			cout << "\n\n" << "Veuillez inscrire votre nom (sans accents)" << endl;
+			cin >> nom;
+		} while (lead.is_ascii(nom) != 0);
+
+		lead.writeScore(Score, nom);
+		Score = 0;
+		cout << "\n\n" << "Score enregistre, merci d'avoir joue!" << endl;
+		return;
+	}
+	else if (manette["4"] == 0) {
+		Score = 0;
+		cout << "\n\n" << "Le score n'a pas ete enregistre, merci d'avoir joue!" << endl;
+	}
+
+	/*switch ((c = _getch())) {
 	case KEY_UPPER_O:
 	case KEY_O:
 		
@@ -67,7 +90,7 @@ void Menu::registerPlayer()
 		break;
 	default:
 		break;
-	}
+	}*/
 }
 
 
@@ -326,10 +349,31 @@ void Menu::fishingLoop(Fish aFish, GridObject fishObj) {
 		cout << "Vous avez attrape un poisson! Voulez vous continuer votre peche? O ou N";
 
 	}
-	int c = 0;
-	bool stopping = true;
-	while(stopping)
-	switch ((c = _getch())) {
+
+	manette = com->SerialUpdate();
+	while ((manette["2"] == 1) && (manette["4"] == 1))
+	{
+		manette = com->SerialUpdate();
+		Sleep(20);
+	}
+	if (manette["2"] == 0) {
+		Reset_with_score(false);
+		start();
+		return;
+	}
+	else if (manette["4"] == 0) {
+		//action non
+		Sleep(100);
+		registerPlayer();
+		//stopping = false;
+		system("cls");
+		//Reset_with_score(S.score);
+		show();
+	}
+	/*//int c = 0;
+	//bool stopping = true;
+	//while(stopping)
+	//switch ((c = _getch())) {
 		case KEY_UPPER_O:
 		case KEY_O:
 			//action
@@ -349,7 +393,7 @@ void Menu::fishingLoop(Fish aFish, GridObject fishObj) {
 			break;
 		default:
 			break;
-	}
+	}*/
 
 }
 
