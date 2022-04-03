@@ -45,12 +45,12 @@ void Menu::registerPlayer()
 	Leaderboards lead;
 
 	cout << "\n\n" << "Voulez - vous enregistrer votre score ? O ou N" << endl;
-
+	Sleep(2000);
 	manette = com->SerialUpdate();
 	while ((manette["2"] == 1) && (manette["4"] == 1))
 	{
 		manette = com->SerialUpdate();
-		Sleep(20);
+		
 	}
 	if (manette["2"] == 0) {
 		do
@@ -61,11 +61,15 @@ void Menu::registerPlayer()
 
 		lead.writeScore(Score, nom);
 		Score = 0;
+		com->SetSegement((uint8_t)Score);
+		com->SerialUpdate();
 		cout << "\n\n" << "Score enregistre, merci d'avoir joue!" << endl;
 		return;
 	}
 	else if (manette["4"] == 0) {
 		Score = 0;
+		com->SetSegement((uint8_t)Score);
+		com->SerialUpdate();
 		cout << "\n\n" << "Le score n'a pas ete enregistre, merci d'avoir joue!" << endl;
 	}
 
@@ -273,7 +277,7 @@ void Menu::renderGame() {
 		{
 			moving = false;
 		}
-		Sleep(150);
+		Sleep(67);
 	}
 	cout << "end";
 	gameRun();
@@ -305,17 +309,24 @@ void Menu::fishingLoop(Fish aFish, GridObject fishObj) {
 	}
 
 	int rotations = aFish.difficulte();
+	long lastEncValue = 0;
 	com->SetMoteur(true);
-	com->SerialUpdate();
+	manette = com->SerialUpdate();
+	lastEncValue = manette["E"];
+	
 	cout << " Un poisson est au bout de votre ligne. Appuyez " << rotations << " fois sur W pour l\'attrapper!!!" << endl;
 	int countdown = 0;
-	int hitCount = 0;
+	int pulseCount = lastEncValue;
 	int boucleloop = 0;
 	int result = 0;
-	while (hitCount < rotations) {
+	while( (abs(abs(pulseCount) - abs(lastEncValue)) < rotations)&& (boucleloop <30) ){
+		manette = com->SerialUpdate();
+		pulseCount = manette["E"];
+		Sleep(100);
+		boucleloop++;
 		//wait pour hit //
 		// 87 & 119 //
-		int c = 0;
+		/*int c = 0;
 		boucleloop++;
 		
 		switch ((c = _getch())) {
@@ -330,9 +341,12 @@ void Menu::fishingLoop(Fish aFish, GridObject fishObj) {
 			result = 1;
 			break;
 		}
-		//countdown++;
+		//countdown++;*/
 	}
-
+	if (boucleloop >= 30)
+	{
+		result = 1;
+	}
 	
 	if (result == 1) {
 		//manqué
@@ -480,9 +494,9 @@ void Menu::show()
 
 	}
 }
-#define ZeroMIN -20
-#define ZeroMAX  20
-#define ZeroSpace 200
+#define ZeroMIN -80
+#define ZeroMAX  80
+#define ZeroSpace 90
 #define MAX 600
 
 
