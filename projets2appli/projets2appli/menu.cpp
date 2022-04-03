@@ -28,6 +28,8 @@ void Menu::Reset_with_score(bool increment) {
 	system("cls");
 	if (increment == true) {
 		Score += 1;
+		com->SetSegement((uint8_t)Score);
+		com->SerialUpdate();
 		cout << "\n" << "SCORE: " << to_string(Score) << endl;
 	}
 	else if (increment == false) {
