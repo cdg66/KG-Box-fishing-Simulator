@@ -1,4 +1,4 @@
-//#pragma once
+#pragma once
 
 #include "coordinates.h"
 #include <random>
@@ -12,6 +12,7 @@ class Fish
 
 private:
 	int type_fish = rand() % 3; //indique le type de poisson (petit(0)/moyen(1)/gros(2))
+	int pulses = 96; //nb de pulses par tours
 
 public:
 	Coordinates cord;

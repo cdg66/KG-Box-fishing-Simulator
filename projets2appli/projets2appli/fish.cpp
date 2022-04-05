@@ -73,18 +73,18 @@ int Fish::difficulte()
     switch (type_fish)
     {
     case 0:
-        a = 10;
-        b = 20;
+        a = 1*pulses;
+        b = 3*pulses;
         break;
 
     case 1:
-        a = 20;
-        b = 30;
+        a = 3*pulses;
+        b = 6*pulses;
         break;
 
     case 2:
-        a = 30;
-        b = 40;
+        a = 6*pulses;
+        b = 9*pulses;
         break;
     }
     std::default_random_engine generator;
