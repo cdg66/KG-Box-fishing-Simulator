@@ -6,6 +6,7 @@
 #include "coordinates.h"
 #include "leurres.h"
 #include "Deserialisation.h"
+#include "leurres.h"
 class Menu {
 
 public:

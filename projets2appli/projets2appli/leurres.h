@@ -1,16 +1,15 @@
 #pragma once
 #define LEURRES
-
+#include "fish.h"
+#include <string>
 
 class Leurres {
 	Leurres();
 	~Leurres();
 	int typeInt;
-	
+	std::string typeLeurre;
 public:
-	void etatleurre(int score);
-	void ModifieDiff(int rapala);
-	void MessageLeurre(int rapala); //le leurre du joueur est :
-	// leurre en or, leurre en argent
-
+	void etatLeurre(int score);
+	float modifieDiff(Fish aFish);
+	void messageLeurre(); //le leurre du joueur est :
 };

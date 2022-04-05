@@ -1,0 +1,17 @@
+﻿  appliS2.cpp
+  leurres.cpp
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\projets2appli\projets2appli\leurres.cpp(41,34): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\projets2appli\projets2appli\leurres.cpp(46,34): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\projets2appli\projets2appli\leurres.cpp(51,34): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\projets2appli\projets2appli\leurres.cpp(56,34): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+  menu.cpp
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\projets2appli\projets2appli\menu.cpp(200,6): warning C4101: 'choice' : variable locale non référencée
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\projets2appli\projets2appli\menu.cpp(234,6): warning C4101: 'choice' : variable locale non référencée
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\projets2appli\projets2appli\menu.cpp(294,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+  Génération de code en cours...
+menu.obj : error LNK2019: symbole externe non résolu "public: __cdecl Serialisation::Serialisation(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0Serialisation@@QEAA@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) référencé dans la fonction "public: __cdecl Menu::Menu(void)" (??0Menu@@QEAA@XZ)
+menu.obj : error LNK2019: symbole externe non résolu "public: __cdecl Serialisation::~Serialisation(void)" (??1Serialisation@@QEAA@XZ) référencé dans la fonction "public: void * __cdecl Serialisation::`scalar deleting destructor'(unsigned int)" (??_GSerialisation@@QEAAPEAXI@Z)
+menu.obj : error LNK2019: symbole externe non résolu "public: class nlohmann::basic_json<class std::map,class std::vector,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool,__int64,unsigned __int64,double,class std::allocator,struct nlohmann::adl_serializer,class std::vector<unsigned char,class std::allocator<unsigned char> > > __cdecl Serialisation::SerialUpdate(void)" (?SerialUpdate@Serialisation@@QEAA?AV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@nlohmann@@V?$vector@EV?$allocator@E@std@@@2@@nlohmann@@XZ) référencé dans la fonction "public: void __cdecl Menu::Reset_with_score(bool)" (?Reset_with_score@Menu@@QEAAX_N@Z)
+menu.obj : error LNK2019: symbole externe non résolu "public: void __cdecl Serialisation::SetSegement(unsigned char)" (?SetSegement@Serialisation@@QEAAXE@Z) référencé dans la fonction "public: void __cdecl Menu::Reset_with_score(bool)" (?Reset_with_score@Menu@@QEAAX_N@Z)
+menu.obj : error LNK2019: symbole externe non résolu "public: void __cdecl Serialisation::SetMoteur(bool)" (?SetMoteur@Serialisation@@QEAAX_N@Z) référencé dans la fonction "public: void __cdecl Menu::fishingLoop(class Fish,class GridObject)" (?fishingLoop@Menu@@QEAAXVFish@@VGridObject@@@Z)
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\projets2appli\x64\Debug\projets2appli.exe : fatal error LNK1120: 5 externes non résolus
