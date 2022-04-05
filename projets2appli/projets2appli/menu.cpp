@@ -144,6 +144,10 @@ void Menu::changeSettings()
 		manette = com->SerialUpdate();
 		Sleep(150);
 	}
+	while (manette["3"] == 0)
+	{
+		manette = com->SerialUpdate();
+	}
 	//cin >> choice;
 	switch (select)
 	{
@@ -200,15 +204,17 @@ void Menu::start()
 		GridObject obj = {10,10};
 	}
 	*/
-
+	
 	gameGrid.renderGridOnly();
 
 	cout << "etes vous pret a jouer? o pour continuer n pour retourner au menu" << endl;
 	//cin >> choice;
 	manette = com->SerialUpdate();
-	while ((manette["2"] == 1) && (manette["4"] == 1))
+	//int B4 = manette["4"];
+	while ((manette["2"] == 1) && (manette["4"] == 1) )
 	{
 		manette = com->SerialUpdate();
+		//B4 = manette["4"];
 		Sleep(20);
 	}
 	if (manette["2"] == 0) {
@@ -273,7 +279,8 @@ void Menu::renderGame() {
 		default:
 			break;
 		}
-		if (manette["3"] == 0)
+		int X = manette["X"];
+		if (X > 1000) // changer pour  ACC 
 		{
 			moving = false;
 		}
@@ -475,6 +482,10 @@ void Menu::show()
 				select = 2;
 			}
 		}
+		manette = com->SerialUpdate();
+	}
+	while (manette["3"] == 0)
+	{
 		manette = com->SerialUpdate();
 	}
 	/*int choice;
