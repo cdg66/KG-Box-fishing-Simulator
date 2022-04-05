@@ -64,6 +64,10 @@ void Leurres::messageLeurre() {
 	std::cout << "\n" << "Le leurre activé est: " << typeLeurre << std::endl;
 }
 
+std::string Leurres::getLeurre() {
+	return typeLeurre;
+}
+
 
 
 
