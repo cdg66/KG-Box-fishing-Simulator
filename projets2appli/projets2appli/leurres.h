@@ -5,10 +5,11 @@ class Leurres {
 	Leurres();
 	~Leurres();
 	int typeInt;
+	
 public:
-	void ChoixLeurres(int leurre);
-	void Random(int nbchoisi);
-	int NumberStrikes();
+	void etatleurre(int score);
+	void ModifieDiff(int rapala);
+	void MessageLeurre(int rapala); //le leurre du joueur est :
 	// leurre en or, leurre en argent
 
 };

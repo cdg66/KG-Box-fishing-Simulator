@@ -1,22 +1,24 @@
 #include "leurres.h"
-
+#include "fish.h"
 #include <iostream>
 #include <random>
 
 using namespace std;
 
+string M;
+
+
 Leurres::Leurres()
 {
-	typeInt = 0;
+	//typeInt = 0;
 }
 
 Leurres::~Leurres()
 {
 }
 
-void Leurres::ChoixLeurres(int leurre)
-{
-	switch (leurre) {
+void Leurres::etatleurre(int score) {
+	/*switch (leurre) {
 	case 1:
 		typeInt = 1;
 		break;
@@ -26,17 +28,55 @@ void Leurres::ChoixLeurres(int leurre)
 	case 3:
 		typeInt = 3;
 		break;
+	}*/
+	
+	switch (score) {
+	case 1:
+		score < 3;
+		M = basique;
+		break;
+	case 2:
+		score < 5;
+		M = bronze;
+		break;
+	case 3:
+		score < 7;
+		M = argent;
+		break;
+	case 4:
+		score < 9;
+		M = or ;
+		break;
 	}
+
+	return M;
 }
 
-void Leurres::Random(int nbchoisi) {
-	srand((unsigned)time(0));
-	int random;
-	random = (rand() % 3) + 1;
-	ChoixLeurres(random);
+void Leurres::ModifieDiff(int rapala) {
+	//srand((unsigned)time(0));
+	//int random;
+	//random = (rand() % 3) + 1;
+
+	Fish poisson;
+	switch (rapala) {
+	case 1:
+		poisson.difficulte() / 1.2;
+		break;
+	case 2:
+		poisson.difficulte() / 1.5;
+		break;
+	case 3:
+		poisson.difficulte() / 2;
+		break;
+	default:
+		break;
+	}
+	
+	etatleurre(score);
 }
 
-int Leurres::NumberStrikes()
-{
-	return (50 / typeInt + 1);
+void Leurres::MessageLeurre(int rapala) {
+
+	Leurres l;
+	cout << "\n" << "Le leurre activé est: " << to_string(score) << l.etatleurre(score) << endl;
 }
