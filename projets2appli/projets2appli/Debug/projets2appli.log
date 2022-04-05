@@ -1,4 +1,19 @@
-﻿  menu.cpp
-C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\projets2appli\projets2appli\menu.cpp(158,6): warning C4101: 'choice' : variable locale non référencée
-C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\projets2appli\projets2appli\menu.cpp(216,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
-  projets2appli.vcxproj -> C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\projets2appli\Debug\projets2appli.exe
+﻿  appliS2.cpp
+  fish.cpp
+  grid.cpp
+  Leaderboards.cpp
+C:\Users\emile\Desktop\FinalS2\projets2appli\projets2appli\Leaderboards.cpp(19,20): warning C4018: '<': signed/unsigned mismatch
+  leurres.cpp
+  menu.cpp
+C:\Users\emile\Desktop\FinalS2\projets2appli\projets2appli\menu.cpp(196,6): warning C4101: 'choice': unreferenced local variable
+C:\Users\emile\Desktop\FinalS2\projets2appli\projets2appli\menu.cpp(228,6): warning C4101: 'choice': unreferenced local variable
+C:\Users\emile\Desktop\FinalS2\projets2appli\projets2appli\menu.cpp(287,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+C:\Users\emile\Desktop\FinalS2\projets2appli\projets2appli\Leaderboards.cpp(111): warning C4715: 'Leaderboards::writeScore': not all control paths return a value
+  LINK : C:\Users\emile\Desktop\FinalS2\projets2appli\Debug\projets2appli.exe not found or not built by the last incremental link; performing full link
+menu.obj : error LNK2019: unresolved external symbol "public: __thiscall Serialisation::Serialisation(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (??0Serialisation@@QAE@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) referenced in function "public: __thiscall Menu::Menu(void)" (??0Menu@@QAE@XZ)
+menu.obj : error LNK2019: unresolved external symbol "public: __thiscall Serialisation::~Serialisation(void)" (??1Serialisation@@QAE@XZ) referenced in function "public: void * __thiscall Serialisation::`scalar deleting destructor'(unsigned int)" (??_GSerialisation@@QAEPAXI@Z)
+menu.obj : error LNK2019: unresolved external symbol "public: class nlohmann::basic_json<class std::map,class std::vector,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool,__int64,unsigned __int64,double,class std::allocator,struct nlohmann::adl_serializer,class std::vector<unsigned char,class std::allocator<unsigned char> > > __thiscall Serialisation::SerialUpdate(void)" (?SerialUpdate@Serialisation@@QAE?AV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@nlohmann@@V?$vector@EV?$allocator@E@std@@@2@@nlohmann@@XZ) referenced in function "public: void __thiscall Menu::Reset_with_score(bool)" (?Reset_with_score@Menu@@QAEX_N@Z)
+menu.obj : error LNK2019: unresolved external symbol "public: void __thiscall Serialisation::SetSegement(unsigned char)" (?SetSegement@Serialisation@@QAEXE@Z) referenced in function "public: void __thiscall Menu::Reset_with_score(bool)" (?Reset_with_score@Menu@@QAEX_N@Z)
+menu.obj : error LNK2019: unresolved external symbol "public: void __thiscall Serialisation::SetMoteur(bool)" (?SetMoteur@Serialisation@@QAEX_N@Z) referenced in function "public: void __thiscall Menu::fishingLoop(class Fish,class GridObject)" (?fishingLoop@Menu@@QAEXVFish@@VGridObject@@@Z)
+C:\Users\emile\Desktop\FinalS2\projets2appli\Debug\projets2appli.exe : fatal error LNK1120: 5 unresolved externals
