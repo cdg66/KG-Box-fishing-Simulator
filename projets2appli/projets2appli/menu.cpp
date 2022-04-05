@@ -32,11 +32,11 @@ void Menu::Reset_with_score(bool increment) {
 		com->SetSegement((uint8_t)Score);
 		com->SerialUpdate();
 		leurre.etatLeurre(Score);
-		cout << "\n" << "SCORE: " << to_string(Score) << leurre.getLeurre() << endl;
+		cout << "\n" << "SCORE: " << to_string(Score) << "  Leurre utilise: " << leurre.getLeurre() << endl;
 	}
 	else if (increment == false) {
 		leurre.etatLeurre(Score);
-		cout << "\n" << "SCORE: " << to_string(Score) << leurre.getLeurre() << endl;
+		cout << "\n" << "SCORE: " << to_string(Score) << "  Leurre utilise: " << leurre.getLeurre() << endl;
 	}
 	
 }
@@ -64,6 +64,7 @@ void Menu::registerPlayer()
 
 		lead.writeScore(Score, nom);
 		Score = 0;
+		leurre.etatLeurre(Score);
 		com->SetSegement((uint8_t)Score);
 		com->SerialUpdate();
 		cout << "\n\n" << "Score enregistre, merci d'avoir joue!" << endl;
@@ -71,6 +72,7 @@ void Menu::registerPlayer()
 	}
 	else if (manette["4"] == 0) {
 		Score = 0;
+		leurre.etatLeurre(Score);
 		com->SetSegement((uint8_t)Score);
 		com->SerialUpdate();
 		cout << "\n\n" << "Le score n'a pas ete enregistre, merci d'avoir joue!" << endl;
@@ -329,7 +331,7 @@ void Menu::fishingLoop(Fish aFish, GridObject fishObj) {
 	int pulseCount = lastEncValue;
 	int boucleloop = 0;
 	int result = 0;
-	while( (abs(abs(pulseCount) - abs(lastEncValue)) < rotations)&& (boucleloop <30) ){
+	while( (abs(abs(pulseCount) - abs(lastEncValue)) < rotations)&& (boucleloop <20) ){
 		manette = com->SerialUpdate();
 		pulseCount = manette["E"];
 		Sleep(100);
@@ -353,7 +355,7 @@ void Menu::fishingLoop(Fish aFish, GridObject fishObj) {
 		}
 		//countdown++;*/
 	}
-	if (boucleloop >= 30)
+	if (boucleloop >= 20)
 	{
 		result = 1;
 	}

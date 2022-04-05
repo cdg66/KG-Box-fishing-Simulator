@@ -18,17 +18,17 @@ Leurres::~Leurres()
 void Leurres::etatLeurre(int score) {
 
 
-	if (score < 5)
+	if (score > 4 && score < 8)
 	{
 		typeLeurre = "bronze";
 
 	}
-	else if (score < 7)
+	else if (score > 8 && score < 12)
 	{
 		typeLeurre = "argent";
 
 	}
-	else if (score < 9)
+	else if (score > 12 && score < 16)
 	{
 		typeLeurre = "or";
 
