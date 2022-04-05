@@ -31,6 +31,7 @@ void Menu::Reset_with_score(bool increment) {
 		Score += 1;
 		com->SetSegement((uint8_t)Score);
 		com->SerialUpdate();
+		leurre.etatLeurre(Score);
 		cout << "\n" << "SCORE: " << to_string(Score) << endl;
 	}
 	else if (increment == false) {
