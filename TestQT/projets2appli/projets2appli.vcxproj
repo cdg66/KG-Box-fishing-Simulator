@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{20F565E3-693C-319E-8DEA-232DF12CD919}</ProjectGuid>
+    <ProjectGuid>{02CBF82A-CE24-36B1-B0FD-C1DE98330CF7}</ProjectGuid>
     <RootNamespace>projets2appli</RootNamespace>
     <Keyword>Qt4VSv1.0</Keyword>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
@@ -146,6 +146,7 @@
     <ClCompile Include="projets2appli\grid.cpp" />
     <ClCompile Include="projets2appli\leurres.cpp" />
     <ClCompile Include="projets2appli\menu.cpp" />
+    <ClCompile Include="projets2appli\monInterface.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="projets2appli\Deserialisation.h" />
@@ -159,6 +160,7 @@
     <ClInclude Include="projets2appli\leaderboards.h" />
     <ClInclude Include="projets2appli\leurres.h" />
     <ClInclude Include="projets2appli\menu.h" />
+    <ClInclude Include="projets2appli\monInterface.h" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="debug\moc_predefs.h.cbt">
