@@ -1,6 +1,7 @@
 #include "leurres.h"
 #include <iostream>
 #include <random>
+#include <cmath>
 
 
 
@@ -34,8 +35,8 @@ void Leurres::etatLeurre(int score) {
 	}
 }
 
-float Leurres::modifieDiff(Fish aFish) {
-	float numberEnc = 0;
+int Leurres::modifieDiff(Fish aFish) {
+	int numberEnc = 0;
 	if (typeLeurre == "de base")
 	{
 		numberEnc = aFish.difficulte() / 1;
@@ -55,7 +56,7 @@ float Leurres::modifieDiff(Fish aFish) {
 	{
 		numberEnc = aFish.difficulte() / 1.8;
 	}
-	return numberEnc;
+	return round(numberEnc);
 }
 
 void Leurres::messageLeurre() {

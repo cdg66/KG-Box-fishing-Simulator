@@ -4,6 +4,7 @@
 #include <conio.h>
 #include <time.h>
 #include<windows.h>
+#include "leurres.h"
 
 
 #define KEY_UP 72
@@ -33,6 +34,7 @@ void Menu::Reset_with_score(bool increment) {
 		cout << "\n" << "SCORE: " << to_string(Score) << endl;
 	}
 	else if (increment == false) {
+		leurre.etatLeurre(Score);
 		cout << "\n" << "SCORE: " << to_string(Score) << endl;
 	}
 	
@@ -315,7 +317,7 @@ void Menu::fishingLoop(Fish aFish, GridObject fishObj) {
 		Sleep(200);
 	}
 
-	int rotations = aFish.difficulte();
+	int rotations = leurre.modifieDiff(aFish);
 	long lastEncValue = 0;
 	com->SetMoteur(true);
 	manette = com->SerialUpdate();

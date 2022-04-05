@@ -32,4 +32,5 @@ private:
 	// objet pour la communication
 	Serialisation* com;
 	json manette;
+	Leurres leurre;
 };

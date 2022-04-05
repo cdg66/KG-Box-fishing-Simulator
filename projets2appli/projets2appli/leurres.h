@@ -4,12 +4,13 @@
 #include <string>
 
 class Leurres {
-	Leurres();
-	~Leurres();
+private:
 	int typeInt;
 	std::string typeLeurre;
 public:
+	Leurres();
+	~Leurres();
 	void etatLeurre(int score);
-	float modifieDiff(Fish aFish);
+	int modifieDiff(Fish aFish);
 	void messageLeurre(); //le leurre du joueur est :
 };
