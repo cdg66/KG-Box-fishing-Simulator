@@ -1,6 +1,9 @@
 
+#include <Qapplication>
+#include "GridQt.h"
 #include "menu.h"
 #include "monInterface.h"
+
 
 int main(int argc, char ** argv) {
 	QApplication app(argc, argv);

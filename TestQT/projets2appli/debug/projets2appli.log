@@ -1,10 +1,13 @@
 ﻿  appliS2.cpp
-C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\appliS2.cpp(1,1): warning C4828: The file contains a character starting at offset 0xc8 that is illegal in the current source character set (codepage 65001).
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\appliS2.cpp(1,1): warning C4828: The file contains a character starting at offset 0xf8 that is illegal in the current source character set (codepage 65001).
 C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\fish.h(1,1): warning C4828: The file contains a character starting at offset 0x120 that is illegal in the current source character set (codepage 65001).
 C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\gridObject.h(7,27): warning C4100: 'character': unreferenced formal parameter
-C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\GridQt.h(5,1): error C2504: 'QWidget': base class undefined
   menu.cpp
 C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\fish.h(1,1): warning C4828: The file contains a character starting at offset 0x120 that is illegal in the current source character set (codepage 65001).
 C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\gridObject.h(7,27): warning C4100: 'character': unreferenced formal parameter
-C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\GridQt.h(5,1): error C2504: 'QWidget': base class undefined
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\menu.cpp(164,6): warning C4101: 'choice': unreferenced local variable
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\menu.cpp(231,47): warning C4100: 'fishObj': unreferenced formal parameter
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\menu.cpp(234,6): warning C4189: 'les2': local variable is initialized but not referenced
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\menu.cpp(248,6): warning C4189: 'countdown': local variable is initialized but not referenced
   Generating Code...
+  projets2appli.vcxproj -> C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\debug\projets2appli.exe
