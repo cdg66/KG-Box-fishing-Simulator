@@ -51,6 +51,12 @@
     <ClCompile Include="projets2appli\monInterface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="box.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GridQt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="projets2appli\Deserialisation.h">
@@ -89,7 +95,7 @@
     <ClInclude Include="projets2appli\monInterface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GridQt.h">
+    <ClInclude Include="box.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

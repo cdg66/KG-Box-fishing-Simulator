@@ -1,7 +1,21 @@
-﻿  appliS2.cpp
-C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\appliS2.cpp(1,1): warning C4828: The file contains a character starting at offset 0xf8 that is illegal in the current source character set (codepage 65001).
+﻿  Generate moc_predefs.h
+  box.cpp
+  Leaderboards.cpp
+  SerialPort.cpp
+  appliS2.cpp
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\appliS2.cpp(1,1): warning C4828: The file contains a character starting at offset 0x156 that is illegal in the current source character set (codepage 65001).
 C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\fish.h(1,1): warning C4828: The file contains a character starting at offset 0x120 that is illegal in the current source character set (codepage 65001).
 C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\gridObject.h(7,27): warning C4100: 'character': unreferenced formal parameter
+  fish.cpp
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\fish.cpp(1,1): warning C4828: The file contains a character starting at offset 0x6f9 that is illegal in the current source character set (codepage 65001).
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\fish.h(1,1): warning C4828: The file contains a character starting at offset 0x120 that is illegal in the current source character set (codepage 65001).
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\fish.cpp(38,9): warning C4189: 'random_number2': local variable is initialized but not referenced
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\fish.cpp(37,9): warning C4189: 'random_number1': local variable is initialized but not referenced
+  grid.cpp
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\grid.cpp(1,1): warning C4828: The file contains a character starting at offset 0x445 that is illegal in the current source character set (codepage 65001).
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\gridObject.h(7,27): warning C4100: 'character': unreferenced formal parameter
+  leurres.cpp
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\leurres.cpp(32,26): warning C4100: 'nbchoisi': unreferenced formal parameter
   menu.cpp
 C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\fish.h(1,1): warning C4828: The file contains a character starting at offset 0x120 that is illegal in the current source character set (codepage 65001).
 C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\gridObject.h(7,27): warning C4100: 'character': unreferenced formal parameter
@@ -9,5 +23,30 @@ C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\menu.cpp(164,6
 C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\menu.cpp(231,47): warning C4100: 'fishObj': unreferenced formal parameter
 C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\menu.cpp(234,6): warning C4189: 'les2': local variable is initialized but not referenced
 C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\menu.cpp(248,6): warning C4189: 'countdown': local variable is initialized but not referenced
+  monInterface.cpp
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\monInterface.cpp(101,31): warning C4101: 'espace': unreferenced local variable
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\monInterface.cpp(101,16): warning C4101: 'y': unreferenced local variable
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\monInterface.cpp(101,6): warning C4101: 'index': unreferenced local variable
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\monInterface.cpp(101,22): warning C4101: 'l': unreferenced local variable
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\monInterface.cpp(101,19): warning C4101: 'c': unreferenced local variable
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\monInterface.cpp(101,13): warning C4101: 'x': unreferenced local variable
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\monInterface.cpp(101,25): warning C4101: 'h': unreferenced local variable
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\monInterface.cpp(101,28): warning C4101: 'r': unreferenced local variable
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\monInterface.cpp(99,7): warning C4101: 'text': unreferenced local variable
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\monInterface.cpp(128,53): warning C4100: 'deltaY': unreferenced formal parameter
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\monInterface.cpp(128,41): warning C4100: 'deltaX': unreferenced formal parameter
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\monInterface.cpp(133,52): warning C4100: 'rayon': unreferenced formal parameter
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\monInterface.cpp(133,45): warning C4100: 'y': unreferenced formal parameter
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\monInterface.cpp(133,38): warning C4100: 'x': unreferenced formal parameter
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\monInterface.cpp(138,69): warning C4100: 'largeur': unreferenced formal parameter
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\monInterface.cpp(138,55): warning C4100: 'longueur': unreferenced formal parameter
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\monInterface.cpp(138,48): warning C4100: 'y': unreferenced formal parameter
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\monInterface.cpp(138,41): warning C4100: 'x': unreferenced formal parameter
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\monInterface.cpp(144,51): warning C4100: 'cote': unreferenced formal parameter
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\monInterface.cpp(144,44): warning C4100: 'y': unreferenced formal parameter
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\monInterface.cpp(144,37): warning C4100: 'x': unreferenced formal parameter
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\monInterface.cpp(149,40): warning C4100: 'mode': unreferenced formal parameter
   Generating Code...
-  projets2appli.vcxproj -> C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\debug\projets2appli.exe
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\Leaderboards.cpp(111): warning C4715: 'Leaderboards::writeScore': not all control paths return a value
+appliS2.obj : error LNK2019: unresolved external symbol "public: __cdecl GridQt::GridQt(class QWidget *)" (??0GridQt@@QEAA@PEAVQWidget@@@Z) referenced in function main
+debug\\projets2appli.exe : fatal error LNK1120: 1 unresolved externals
