@@ -5,6 +5,7 @@
 #include "leaderboards.h"
 #include "coordinates.h"
 #include "leurres.h"
+#include "GridQt.h"
 class Menu {
 
 public:

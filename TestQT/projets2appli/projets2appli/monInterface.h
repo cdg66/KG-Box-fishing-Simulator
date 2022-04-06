@@ -12,7 +12,6 @@
 #define MONINTERFACE_H
 
 #include "graphicusGUI.h"
-#include "canevas.h"
 #include <fstream>
 
 class MonInterface : public GraphicusGUI
@@ -47,7 +46,6 @@ public:
 	void updateInterface();
 
 private:
-	Canevas canevas;
 	Informations info;
 };
 
