@@ -2,7 +2,6 @@
 #include <Qapplication>
 #include "GridQt.h"
 #include "menu.h"
-#include "monInterface.h"
 
 
 int main(int argc, char ** argv) {
@@ -15,7 +14,7 @@ int main(int argc, char ** argv) {
 	
 	
 	//Menu* thisMenu;
-	// pour commencer ca doit créer un nouveau menu //
+	// pour commencer ca doit crï¿½er un nouveau menu //
 	//thisMenu = new Menu();
 	
 	return app.exec();

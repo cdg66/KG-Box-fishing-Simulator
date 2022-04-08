@@ -8,13 +8,14 @@
 #include "qgridlayout.h"
 #include <QGraphicsRectItem>
 #include "qlcdnumber.h"
+#include <qmainwindow.h>
 class GridQt : public QWidget
 {
 	Q_OBJECT
 public:
-	//GridQt(QWidget* parent = nullptr);
+	GridQt(QWidget* parent = nullptr);
 
-	QGridLayout *gameGridLayout;
+	QGridLayout *layout;
 
 	// Nombre de rectangles pour faire les cases de fish (grid size)
 	QGraphicsRectItem *case1_1;
@@ -25,11 +26,11 @@ public:
 	QLCDNumber *scoreDisplay;
 	QLabel* scoreDisplayLabel;
 
-	QLabel* labelMessageBox;
+	QLabel* leaderboardTitleLabel;
 
-	QPushButton* btnStartGame;
-	QPushButton* btnOptionYes;
-	QPushButton* btnOptionNo;
+	QPushButton* playBtn;
+	QPushButton* yesBtn;
+	QPushButton* noBtn;
 private slots:
 
 private:
