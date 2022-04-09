@@ -1,0 +1,62 @@
+#pragma once
+#include <QMessageBox>
+#include <QPixmap>
+#include <QLabel>
+
+
+//afficher l'image du leurre en question, faire pour chaque leurre
+
+
+MainWindow::MainWindow(QWidget *parent) :
+    QMainWindow(parent),
+    ui(new Ui::MainWindow)
+{
+    ui->setupUi(this);
+
+    QPixmap pm("C:/Users/pathdelimage); // 
+    ui->label_2->setPixmap(pm);
+    ui->label_2->setScaledContents(true);
+}
+
+
+//changer la difficulté ?
+
+//message au joueur indicant son leurre
+
+void Leurres::etatLeurre(int score) {
+
+
+	if (score > 4 && score < 8)
+	{
+		QMessageBox msgBox;
+		msgBox.setText("Votre leurre est en bronze");
+		msgBox.exec();
+
+		QPixmap pm("C:/Users/pathdelimage); // 
+   		ui->label_2->setPixmap(pm);
+   		ui->label_2->setScaledContents(true);
+
+	}
+	else if (score > 8 && score < 12)
+	{
+		QMessageBox msgBox;
+		msgBox.setText("Votre leurre est en argent");
+		msgBox.exec();
+
+		QPixmap pm("C:/Users/pathdelimage); // 
+   		ui->label_2->setPixmap(pm);
+   		ui->label_2->setScaledContents(true);
+
+	}
+	else if (score > 12 && score < 16)
+	{
+		QMessageBox msgBox;
+		msgBox.setText("Votre leurre est en or");
+		msgBox.exec();
+
+		QPixmap pm("C:/Users/pathdelimage); // 
+   		ui->label_2->setPixmap(pm);
+   		ui->label_2->setScaledContents(true);
+
+	}
+}
