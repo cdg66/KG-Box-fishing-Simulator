@@ -1,6 +1,6 @@
 
 #include <Qapplication>
-#include "GridQt.h"
+//#include "GridQt.h"
 #include "menu.h"
 #include "monInterface.h"
 

@@ -5,22 +5,17 @@
 
 #include <QGraphicsRectItem>
 #include <QBrush>
-#include <QGraphicsSceneMouseEvent>
 
 class Box : public QGraphicsRectItem {
 private:
 	QBrush brush;
+	int X;
+	int Y;
 public:
 	Box(QGraphicsItem* parent = 0);
 	~Box();
 	void setColor(QColor color);
-	void setCoord();
-
-	//void setBox();
-	//void getBox();
-	//void placeFish();
-	//void placeLeurre();
-
+	void setCoord(int x, int y);
 
 };
 

@@ -17,4 +17,8 @@ void Box::setColor(QColor color)
     brush.setColor(color);
     setBrush(color);
 }
-void Box::setCoord() {}
+void Box::setCoord(int x, int y)
+{
+    X = x;
+    Y = y;
+}
