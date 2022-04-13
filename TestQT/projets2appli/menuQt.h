@@ -16,9 +16,16 @@ class MenuQt : public QWidget
 
 public:
 	MenuQt(QWidget* parent = nullptr);
-	QPushButton* startGameBtn;
-	QPushButton* changeSettings;
 
-	QLabel* lblMenu;
+	QHBoxLayout* layoutChoiceBtn;
+	QVBoxLayout* layoutMainMenuShow;
+
+	QLabel* lblWelcome;
+	QLabel* choicesUser;
+	QLabel* asciiArt;
+	QLabel* leaderboardTitleLabel;
+
+	QPushButton* btnShowSettings;
+	QPushButton* btnStartNewGame;
 
 };

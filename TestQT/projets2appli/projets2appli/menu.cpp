@@ -77,11 +77,12 @@ Menu::Menu()
 Menu::~Menu()
 {
 }
-/*
+
 void Menu::changeSettingsQt() {
-	QMetaObject::invokeMethod()
+	//QMetaObject::invokeMethod(/*Window de l'application*/, "showSettingsWidget");
+
 }
-*/
+
 void Menu::changeSettings()
 {
 

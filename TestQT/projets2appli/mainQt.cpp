@@ -10,7 +10,7 @@ void MainQt::showMenuWidget()
 
 void MainQt::showSettingsWidget()
 {
-	menuQtWidget->hide();
+	menuQtWidget->show();
 	gridQtWidget->hide();
 	settingsQtWidget->show();
 

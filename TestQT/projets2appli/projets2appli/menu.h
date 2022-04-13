@@ -20,6 +20,7 @@ public:
 	void renderGame();
 	void gameRun();
 	void fishingLoop(Fish aFish, GridObject fishObj);
+	void changeSettingsQt();
 
 
 private:

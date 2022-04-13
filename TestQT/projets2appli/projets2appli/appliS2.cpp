@@ -6,7 +6,7 @@
 int main(int argc, char ** argv) {
 	QApplication app(argc, argv);
 	QWidget* window = app.activeWindow();
-	window = new SettingsQt();
+	window = new MenuQt();
 	window->show();
 	//MonInterface gui("Test-Fish");
 	

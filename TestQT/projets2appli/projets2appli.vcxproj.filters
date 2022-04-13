@@ -48,13 +48,16 @@
     <ClCompile Include="projets2appli\leurres.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="mainQt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="projets2appli\menu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="settingsQt.cpp">
+    <ClCompile Include="menuQt.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="FishQt.cpp">
+    <ClCompile Include="settingsQt.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -92,18 +95,18 @@
     <ClInclude Include="projets2appli\leurres.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <CustomBuild Include="mainQt.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
     <ClInclude Include="projets2appli\menu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="settingsQt.h">
+    <CustomBuild Include="menuQt.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="menuQt.h">
+    </CustomBuild>
+    <CustomBuild Include="settingsQt.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FishQt.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="debug\moc_GridQt.cpp">
@@ -112,11 +115,29 @@
     <ClCompile Include="release\moc_GridQt.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
+    <ClCompile Include="debug\moc_mainQt.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_mainQt.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug\moc_menuQt.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_menuQt.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
     <CustomBuild Include="debug\moc_predefs.h.cbt">
       <Filter>Generated Files</Filter>
     </CustomBuild>
     <CustomBuild Include="release\moc_predefs.h.cbt">
       <Filter>Generated Files</Filter>
     </CustomBuild>
+    <ClCompile Include="debug\moc_settingsQt.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_settingsQt.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

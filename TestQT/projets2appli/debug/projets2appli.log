@@ -1,6 +1,3 @@
-﻿  settingsQt.cpp
-C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\settingsQt.cpp(1,1): warning C4828: The file contains a character starting at offset 0x43c that is illegal in the current source character set (codepage 65001).
-C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\settingsQt.cpp(1,1): warning C4828: The file contains a character starting at offset 0x573 that is illegal in the current source character set (codepage 65001).
-C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\settingsQt.cpp(1,1): warning C4828: The file contains a character starting at offset 0x64f that is illegal in the current source character set (codepage 65001).
-C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\settingsQt.cpp(2,33): warning C4100: 'parent': unreferenced formal parameter
+﻿  menuQt.cpp
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\menuQt.cpp(3,25): warning C4100: 'parent': unreferenced formal parameter
   projets2appli.vcxproj -> C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\debug\projets2appli.exe
