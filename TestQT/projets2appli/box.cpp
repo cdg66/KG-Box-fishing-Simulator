@@ -17,7 +17,7 @@ void Box::setColor(QColor color)
     brush.setColor(color);
     setBrush(color);
 }
-void Box::setTaille(int t);
+void Box::setTaille(int t)
 {
     taille = t;
 }

@@ -1,9 +1,15 @@
+#pragma once
+#ifndef LEADERBOARDS_H
 #define LEADERBOARDS_H
 
 #include <fstream>
 #include <iostream>
 #include <string>
 #include "json.hpp"
+#include <QTableWidget>
+#include <QTableWidgetItem>
+#include <QHeaderView>
+#include <QString>
 
 
 using json = nlohmann::json;
@@ -12,6 +18,9 @@ class Leaderboards {
 
 private:
 	json file_json;
+	QTableWidget* LeaderboardWidget;
+	QStringList LeaderboardHeader;
+
 public:
 
 	Leaderboards();
@@ -23,3 +32,4 @@ public:
 	bool writeScore(int score, std::string nom); //ecrit le score et le nom du joueur dans leaderboards.txt
 
 };
+#endif
