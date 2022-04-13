@@ -78,8 +78,11 @@ Menu::~Menu()
 {
 }
 
+void Menu::changeSettingsQt()
+
 void Menu::changeSettings()
 {
+
 	cout << "Voici les reglages du jeu" << endl;
 	cout << "Valeurs actuelles : \nDifficulte : " << /*PRINT DIF*/" N/A " "\n" << "Grosseur du tableau : " << gameGrid.getSize() << " X " << gameGrid.getSize() <<"\n" << endl;
 	cout << "\n Liste des difficultes : \n 1. Facile \n 2. Normal \n 3. Difficile \n" << endl;

@@ -1,7 +1,9 @@
 #include "settingsQt.h"
 SettingsQt::SettingsQt(QWidget* parent)
 {
-	
+	textDif = new QLabel(tr("Veuillez choisir une difficulte"));
+	textGridSize = new QLabel(tr("Veuillez choisir la grandeur du tableau de jeu"));
+
 	diffBtnLayout = new QHBoxLayout();
 	gridSizeLayout = new QHBoxLayout();
 
@@ -31,9 +33,12 @@ SettingsQt::SettingsQt(QWidget* parent)
 	listBtn[5] = diffSet3;
 
 	/*QPalette maybe pour mettre ça en couleur?*/
-
-
-	//setLayout();
+	settingMainLayout = new QVBoxLayout();
+	settingMainLayout->addWidget(textDif);
+	settingMainLayout->addLayout(diffBtnLayout);
+	settingMainLayout->addWidget(textGridSize);
+	settingMainLayout->addLayout(gridSizeLayout);
+	setLayout(settingMainLayout);
 	setWindowTitle(tr("Modifier les paramètres"));
 }
 

@@ -27,4 +27,5 @@ public:
 	
 	QPushButton* listBtn[6];
 
+	QVBoxLayout* settingMainLayout;
 };
