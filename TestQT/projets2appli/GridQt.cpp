@@ -24,11 +24,11 @@ GridQt::GridQt(QWidget* parent) {
     labelCase3_2 = new QLabel();
     labelCase3_3 = new QLabel();
 
-
-
-
     yesBtn = new QPushButton(tr("Oui"));
     noBtn = new QPushButton(tr("Non"));
+
+    listBtn[0] = yesBtn;
+    listBtn[1] = noBtn;
 
     //layout->addLayout(actionBtnLayout);
 
