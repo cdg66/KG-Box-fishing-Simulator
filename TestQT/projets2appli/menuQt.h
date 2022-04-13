@@ -6,15 +6,16 @@
 #include <qmainwindow.h>
 #include <qpushbutton.h>
 #include <qwidget.h>
+#include <qlabel.h>
 
 
 
-class menuQt : public QWidget
+class MenuQt : public QWidget
 {
 	Q_OBJECT
 
 public:
-	menuQt(QWidget* parent = nullptr);
+	MenuQt(QWidget* parent = nullptr);
 	QPushButton* startGameBtn;
 	QPushButton* changeSettings;
 

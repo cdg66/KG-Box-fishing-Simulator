@@ -14,3 +14,14 @@ GridQt::GridQt(QWidget* parent) {
     setWindowTitle(tr("Main menu"));
 
 }
+
+void GridQt::btnChangeHover(int btn) {
+    //boucle qui fait le tour des boutons pour les change//
+    for (QPushButton* aBtn : listBtn)
+    {
+        aBtn->setFlat(false);
+
+    }
+    // lui quon veut mettre en évidence
+    listBtn[btn]->setFlat(true);
+}

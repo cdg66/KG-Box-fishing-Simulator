@@ -31,8 +31,11 @@ public:
 	QPushButton* playBtn;
 	QPushButton* yesBtn;
 	QPushButton* noBtn;
-private slots:
+	QPushButton* listBtn[3];
 
+
+public slots:
+	void btnChangeHover(int btn);
 private:
 
 };

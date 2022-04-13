@@ -1,4 +1,4 @@
-/*
+
 #include <qwidget.h>
 #include <qpushbutton.h>
 #include <qboxlayout.h>
@@ -28,4 +28,3 @@ public:
 	QPushButton* listBtn[6];
 
 };
-*/
