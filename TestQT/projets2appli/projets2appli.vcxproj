@@ -140,6 +140,7 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FishQt.cpp" />
     <ClCompile Include="GridQt.cpp" />
     <ClCompile Include="projets2appli\Leaderboards.cpp" />
     <ClCompile Include="projets2appli\SerialPort.cpp" />
@@ -151,6 +152,7 @@
     <ClCompile Include="settingsQt.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FishQt.h" />
     <ClInclude Include="menuQt.h" />
     <ClInclude Include="projets2appli\Deserialisation.h" />
     <ClInclude Include="settingsQt.h" />

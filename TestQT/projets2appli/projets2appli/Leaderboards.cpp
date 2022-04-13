@@ -78,11 +78,14 @@ bool Leaderboards::readScore()
 		int i = 0;
 		for (auto it = file_json.begin(); it != file_json.end(); ++it)
 		{	
-			QString stringC = it.key();
-			QTableWidgetItem *k = new QTableWidgetItem(stringC);
-			QTableWidgetItem *v = new QTableWidgetItem(it.value());
-			LeaderboardWidget->setItem(i, 1, k);
-			LeaderboardWidget->setItem(i, 2, v);
+			std::string A = it.key();
+			int T = it.value();
+			//QString stringC = it.key();
+			QString stringC = QString::fromStdString(it.key());
+			tableItem1 = new QTableWidgetItem(stringC);
+			tableItem2 = new QTableWidgetItem(T);
+			LeaderboardWidget->setItem(i, 1, tableItem1);
+			LeaderboardWidget->setItem(i, 2, tableItem2);
 			
 			i+=1;
 		}

@@ -54,6 +54,9 @@
     <ClCompile Include="settingsQt.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FishQt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="projets2appli\Deserialisation.h">
@@ -96,6 +99,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="menuQt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FishQt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

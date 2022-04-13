@@ -1,10 +1,48 @@
-﻿  settingsQt.cpp
-C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\settingsQt.cpp(1,1): warning C4828: The file contains a character starting at offset 0x3ab that is illegal in the current source character set (codepage 65001).
-C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\settingsQt.cpp(1,1): warning C4828: The file contains a character starting at offset 0x3f8 that is illegal in the current source character set (codepage 65001).
-C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\settingsQt.cpp(1,1): warning C4828: The file contains a character starting at offset 0x4d6 that is illegal in the current source character set (codepage 65001).
-C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\settingsQt.cpp(2,33): warning C4100: 'parent': unreferenced formal parameter
-settingsQt.obj : error LNK2001: unresolved external symbol "public: virtual struct QMetaObject const * __cdecl SettingsQt::metaObject(void)const " (?metaObject@SettingsQt@@UEBAPEBUQMetaObject@@XZ)
-settingsQt.obj : error LNK2001: unresolved external symbol "public: virtual void * __cdecl SettingsQt::qt_metacast(char const *)" (?qt_metacast@SettingsQt@@UEAAPEAXPEBD@Z)
-settingsQt.obj : error LNK2001: unresolved external symbol "public: virtual int __cdecl SettingsQt::qt_metacall(enum QMetaObject::Call,int,void * *)" (?qt_metacall@SettingsQt@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z)
-settingsQt.obj : error LNK2001: unresolved external symbol "public: static struct QMetaObject const SettingsQt::staticMetaObject" (?staticMetaObject@SettingsQt@@2UQMetaObject@@B)
-debug\\projets2appli.exe : fatal error LNK1120: 4 unresolved externals
+﻿  Generate moc_predefs.h
+  MOC GridQt.h
+CUSTOMBUILD : warning : Failed to resolve include "C:/Users/emile/Desktop/testQT2/TestQT/projets2appli/debug/moc_predefs.h" for moc file GridQt.h
+  FishQt.cpp
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\TestQT\projets2appli\FishQt.cpp(1,1): warning C4828: Le fichier contient un caractère qui débute à l'offset 0x7ca et qui est non conforme dans le jeu de caractères source actuel (page de codes 65001).
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\TestQT\projets2appli\FishQt.h(1,1): warning C4828: Le fichier contient un caractère qui débute à l'offset 0x27e et qui est non conforme dans le jeu de caractères source actuel (page de codes 65001).
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\TestQT\projets2appli\FishQt.cpp(63,15): warning C4129: 'P' : caractère de séquence d'échappement non reconnu
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\TestQT\projets2appli\FishQt.cpp(67,15): warning C4129: 'P' : caractère de séquence d'échappement non reconnu
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\TestQT\projets2appli\FishQt.cpp(71,15): warning C4129: 'P' : caractère de séquence d'échappement non reconnu
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\TestQT\projets2appli\FishQt.cpp(56,27): warning C4100: 'size_box' : paramètre formel non référencé
+  GridQt.cpp
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\TestQT\projets2appli\GridQt.cpp(1,1): warning C4828: Le fichier contient un caractère qui débute à l'offset 0x26c et qui est non conforme dans le jeu de caractères source actuel (page de codes 65001).
+  Leaderboards.cpp
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\TestQT\projets2appli\projets2appli\Leaderboards.cpp(70,50): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+  SerialPort.cpp
+  appliS2.cpp
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\TestQT\projets2appli\projets2appli\fish.h(1,1): warning C4828: Le fichier contient un caractère qui débute à l'offset 0x120 et qui est non conforme dans le jeu de caractères source actuel (page de codes 65001).
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\TestQT\projets2appli\projets2appli\gridObject.h(7,27): warning C4100: 'character' : paramètre formel non référencé
+  fish.cpp
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\TestQT\projets2appli\projets2appli\fish.cpp(1,1): warning C4828: Le fichier contient un caractère qui débute à l'offset 0x6f9 et qui est non conforme dans le jeu de caractères source actuel (page de codes 65001).
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\TestQT\projets2appli\projets2appli\fish.h(1,1): warning C4828: Le fichier contient un caractère qui débute à l'offset 0x120 et qui est non conforme dans le jeu de caractères source actuel (page de codes 65001).
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\TestQT\projets2appli\projets2appli\fish.cpp(38,9): warning C4189: 'random_number2' : variable locale initialisée mais non référencée
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\TestQT\projets2appli\projets2appli\fish.cpp(37,9): warning C4189: 'random_number1' : variable locale initialisée mais non référencée
+  grid.cpp
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\TestQT\projets2appli\projets2appli\grid.cpp(1,1): warning C4828: Le fichier contient un caractère qui débute à l'offset 0x445 et qui est non conforme dans le jeu de caractères source actuel (page de codes 65001).
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\TestQT\projets2appli\projets2appli\gridObject.h(7,27): warning C4100: 'character' : paramètre formel non référencé
+  leurres.cpp
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\TestQT\projets2appli\projets2appli\leurres.cpp(32,26): warning C4100: 'nbchoisi' : paramètre formel non référencé
+  menu.cpp
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\TestQT\projets2appli\projets2appli\fish.h(1,1): warning C4828: Le fichier contient un caractère qui débute à l'offset 0x120 et qui est non conforme dans le jeu de caractères source actuel (page de codes 65001).
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\TestQT\projets2appli\projets2appli\gridObject.h(7,27): warning C4100: 'character' : paramètre formel non référencé
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\TestQT\projets2appli\projets2appli\menu.cpp(164,6): warning C4101: 'choice' : variable locale non référencée
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\TestQT\projets2appli\projets2appli\menu.cpp(231,47): warning C4100: 'fishObj' : paramètre formel non référencé
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\TestQT\projets2appli\projets2appli\menu.cpp(234,6): warning C4189: 'les2' : variable locale initialisée mais non référencée
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\TestQT\projets2appli\projets2appli\menu.cpp(248,6): warning C4189: 'countdown' : variable locale initialisée mais non référencée
+  settingsQt.cpp
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\TestQT\projets2appli\settingsQt.cpp(1,1): warning C4828: Le fichier contient un caractère qui débute à l'offset 0x3ab et qui est non conforme dans le jeu de caractères source actuel (page de codes 65001).
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\TestQT\projets2appli\settingsQt.cpp(1,1): warning C4828: Le fichier contient un caractère qui débute à l'offset 0x3f8 et qui est non conforme dans le jeu de caractères source actuel (page de codes 65001).
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\TestQT\projets2appli\settingsQt.cpp(1,1): warning C4828: Le fichier contient un caractère qui débute à l'offset 0x4d4 et qui est non conforme dans le jeu de caractères source actuel (page de codes 65001).
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\TestQT\projets2appli\settingsQt.cpp(2,33): warning C4100: 'parent' : paramètre formel non référencé
+  moc_GridQt.cpp
+  Génération de code en cours...
+C:\Users\Gring\OneDrive\Documents\GitHub\KG-Box-fishing-Simulator\TestQT\projets2appli\projets2appli\Leaderboards.cpp(126): warning C4715: 'Leaderboards::writeScore' : les chemins de contrôle ne retournent pas tous une valeur
+settingsQt.obj : error LNK2001: symbole externe non résolu "public: virtual struct QMetaObject const * __cdecl SettingsQt::metaObject(void)const " (?metaObject@SettingsQt@@UEBAPEBUQMetaObject@@XZ)
+settingsQt.obj : error LNK2001: symbole externe non résolu "public: virtual void * __cdecl SettingsQt::qt_metacast(char const *)" (?qt_metacast@SettingsQt@@UEAAPEAXPEBD@Z)
+settingsQt.obj : error LNK2001: symbole externe non résolu "public: virtual int __cdecl SettingsQt::qt_metacall(enum QMetaObject::Call,int,void * *)" (?qt_metacall@SettingsQt@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z)
+settingsQt.obj : error LNK2001: symbole externe non résolu "public: static struct QMetaObject const SettingsQt::staticMetaObject" (?staticMetaObject@SettingsQt@@2UQMetaObject@@B)
+debug\\projets2appli.exe : fatal error LNK1120: 4 externes non résolus
