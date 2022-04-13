@@ -1,3 +1,4 @@
+/*
 #include "settingsQt.h"
 
 SettingsQt::SettingsQt(QWidget* parent)
@@ -33,8 +34,8 @@ SettingsQt::SettingsQt(QWidget* parent)
 
 	/*QPalette maybe pour mettre ça en couleur?*/
 
-
-	//setLayout(/*mettre ça dans un gros layout*/);
+/*
+	//setLayout();
 	setWindowTitle(tr("Modifier les paramètres"));
 }
 
@@ -49,3 +50,5 @@ void SettingsQt::btnChangeHover(int btn)
 	// lui quon veut mettre en évidence
 	listBtn[btn]->setFlat(true);
 }
+
+*/

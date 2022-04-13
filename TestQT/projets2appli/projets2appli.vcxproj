@@ -151,6 +151,7 @@
     <ClCompile Include="settingsQt.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="menuQt.h" />
     <ClInclude Include="projets2appli\Deserialisation.h" />
     <ClInclude Include="settingsQt.h" />
     <CustomBuild Include="GridQt.h">
