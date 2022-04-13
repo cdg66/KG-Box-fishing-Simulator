@@ -1,10 +1,14 @@
-﻿  settingsQt.cpp
-C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\settingsQt.cpp(1,1): warning C4828: The file contains a character starting at offset 0x3ab that is illegal in the current source character set (codepage 65001).
-C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\settingsQt.cpp(1,1): warning C4828: The file contains a character starting at offset 0x3f8 that is illegal in the current source character set (codepage 65001).
-C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\settingsQt.cpp(1,1): warning C4828: The file contains a character starting at offset 0x4d6 that is illegal in the current source character set (codepage 65001).
-C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\settingsQt.cpp(2,33): warning C4100: 'parent': unreferenced formal parameter
-settingsQt.obj : error LNK2001: unresolved external symbol "public: virtual struct QMetaObject const * __cdecl SettingsQt::metaObject(void)const " (?metaObject@SettingsQt@@UEBAPEBUQMetaObject@@XZ)
-settingsQt.obj : error LNK2001: unresolved external symbol "public: virtual void * __cdecl SettingsQt::qt_metacast(char const *)" (?qt_metacast@SettingsQt@@UEAAPEAXPEBD@Z)
-settingsQt.obj : error LNK2001: unresolved external symbol "public: virtual int __cdecl SettingsQt::qt_metacall(enum QMetaObject::Call,int,void * *)" (?qt_metacall@SettingsQt@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z)
-settingsQt.obj : error LNK2001: unresolved external symbol "public: static struct QMetaObject const SettingsQt::staticMetaObject" (?staticMetaObject@SettingsQt@@2UQMetaObject@@B)
-debug\\projets2appli.exe : fatal error LNK1120: 4 unresolved externals
+﻿  menuQt.cpp
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\menuQt.cpp(3,25): warning C4100: 'parent': unreferenced formal parameter
+  appliS2.cpp
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\fish.h(1,1): warning C4828: The file contains a character starting at offset 0x120 that is illegal in the current source character set (codepage 65001).
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\projets2appli\gridObject.h(7,27): warning C4100: 'character': unreferenced formal parameter
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\mainQt.h(1,1): warning C4828: The file contains a character starting at offset 0x81 that is illegal in the current source character set (codepage 65001).
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\mainQt.h(1,1): warning C4828: The file contains a character starting at offset 0x8b that is illegal in the current source character set (codepage 65001).
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\mainQt.h(1,1): warning C4828: The file contains a character starting at offset 0xd5 that is illegal in the current source character set (codepage 65001).
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\mainQt.h(1,1): warning C4828: The file contains a character starting at offset 0xe3 that is illegal in the current source character set (codepage 65001).
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\mainQt.h(1,1): warning C4828: The file contains a character starting at offset 0x160 that is illegal in the current source character set (codepage 65001).
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\mainQt.h(1,1): warning C4828: The file contains a character starting at offset 0x183 that is illegal in the current source character set (codepage 65001).
+C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\mainQt.h(1,1): warning C4828: The file contains a character starting at offset 0x187 that is illegal in the current source character set (codepage 65001).
+  Generating Code...
+  projets2appli.vcxproj -> C:\Users\emile\Desktop\testQT2\TestQT\projets2appli\debug\projets2appli.exe

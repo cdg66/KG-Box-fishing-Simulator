@@ -1,13 +1,12 @@
 
 #include <Qapplication>
-//#include "GridQt.h"
 #include "menu.h"
 
 
 int main(int argc, char ** argv) {
 	QApplication app(argc, argv);
 	QWidget* window = app.activeWindow();
-	window = new GridQt();
+	window = new MainQt();
 	window->show();
 	//MonInterface gui("Test-Fish");
 	

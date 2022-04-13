@@ -78,6 +78,7 @@ bool Leaderboards::readScore()
 		int i = 0;
 		for (auto it = file_json.begin(); it != file_json.end(); ++it)
 		{	
+			/*
 			QString stringC = it.key();
 			QTableWidgetItem *k = new QTableWidgetItem(stringC);
 			QTableWidgetItem *v = new QTableWidgetItem(it.value());
@@ -85,6 +86,7 @@ bool Leaderboards::readScore()
 			LeaderboardWidget->setItem(i, 2, v);
 			
 			i+=1;
+			*/
 		}
 		ifile.close();
 		return true;

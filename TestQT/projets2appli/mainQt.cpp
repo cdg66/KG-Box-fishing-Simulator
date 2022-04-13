@@ -16,7 +16,7 @@ void MainQt::showSettingsWidget()
 
 }
 
-MainQt::MainQt(QWidget* parent = nullptr) {
+MainQt::MainQt(QWidget* parent) {
 	gridQtWidget = new GridQt();
 	menuQtWidget = new MenuQt();
 	settingsQtWidget = new SettingsQt();
