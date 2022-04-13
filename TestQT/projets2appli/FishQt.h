@@ -3,6 +3,8 @@
 #include <random>
 #include <QGraphicsItem>
 #include <QGraphicsPixmapItem>
+#include <QGraphicsScene>
+#include <QGraphicsView>
 #include <QPixmap>
 #include <QString>
 
@@ -16,6 +18,9 @@ class FishQt : public QGraphicsPixmapItem
 private:
 	int type_fish = rand() % 3; //indique le type de poisson (petit(0)/moyen(1)/gros(2))
 	int pulses = 96; //nb de pulses par tours
+	QGraphicsScene* scene;
+	QGraphicsPixmapItem* item;
+	QGraphicsView* view;
 
 public:
 	Coordinates cord;

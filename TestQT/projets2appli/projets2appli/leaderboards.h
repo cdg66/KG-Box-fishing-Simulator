@@ -20,6 +20,8 @@ private:
 	json file_json;
 	QTableWidget* LeaderboardWidget;
 	QStringList LeaderboardHeader;
+	QTableWidgetItem* tableItem1;
+	QTableWidgetItem* tableItem2;
 
 public:
 
