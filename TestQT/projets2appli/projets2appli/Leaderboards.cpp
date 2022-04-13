@@ -66,13 +66,25 @@ bool Leaderboards::readScore()
 	{
 		ifile >> file_json;
 
-		cout << "NOM" << " | " << "SCORES" << endl;
-		cout << "----------------------" << endl;
+		LeaderboardWidget = new QTableWidget();
+		LeaderboardWidget->setRowCount(file_json.size());
+		LeaderboardWidget->setColumnCount(3);
 
+		LeaderboardHeader << "#" << "Name" << "Text";
+
+		LeaderboardWidget->setHorizontalHeaderLabels(LeaderboardHeader);
+		LeaderboardWidget->verticalHeader()->setVisible(false);
+		
+		int i = 0;
 		for (auto it = file_json.begin(); it != file_json.end(); ++it)
-		{
-			cout << "|" << it.key() << " | " << it.value() << "|" << '\n';
-			cout << "----------------------" << endl;
+		{	
+			QString stringC = it.key();
+			QTableWidgetItem *k = new QTableWidgetItem(stringC);
+			QTableWidgetItem *v = new QTableWidgetItem(it.value());
+			LeaderboardWidget->setItem(i, 1, k);
+			LeaderboardWidget->setItem(i, 2, v);
+			
+			i+=1;
 		}
 		ifile.close();
 		return true;
