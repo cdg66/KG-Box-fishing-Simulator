@@ -88,6 +88,7 @@ bool Leaderboards::readScore()
 			LeaderboardWidget->setItem(i, 2, tableItem2);
 			
 			i+=1;
+			
 		}
 		ifile.close();
 		return true;
