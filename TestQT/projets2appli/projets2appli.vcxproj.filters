@@ -51,6 +51,9 @@
     <ClCompile Include="projets2appli\menu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="settingsQt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="projets2appli\Deserialisation.h">
@@ -87,6 +90,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="projets2appli\menu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="settingsQt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
