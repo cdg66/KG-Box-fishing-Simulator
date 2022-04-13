@@ -77,9 +77,11 @@ Menu::Menu()
 Menu::~Menu()
 {
 }
-
-void Menu::changeSettingsQt()
-
+/*
+void Menu::changeSettingsQt() {
+	QMetaObject::invokeMethod()
+}
+*/
 void Menu::changeSettings()
 {
 
