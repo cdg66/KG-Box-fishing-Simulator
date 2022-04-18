@@ -22,10 +22,10 @@ void sendMsg(int16_t JStick_X, int16_t JStick_Y, bool Btn2, bool Btn3, bool Btn4
   // Elements du message
   docSend["JX"] = JStick_X;
   docSend["JY"] = JStick_Y;
-  docSend["2"] = Btn2;
-  docSend["3"] = Btn3;
-  docSend["4"] = Btn4;
-  docSend["5"] = Btn5;
+  docSend["2"] = (uint8_t)Btn2;
+  docSend["3"] = (uint8_t)Btn3;
+  docSend["4"] = (uint8_t)Btn4;
+  docSend["5"] = (uint8_t)Btn5;
   docSend["X"] = ACC_X;
   docSend["Y"] = ACC_Y;
   docSend["Z"] = ACC_Z;

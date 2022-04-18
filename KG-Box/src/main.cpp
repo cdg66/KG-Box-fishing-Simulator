@@ -7,7 +7,7 @@
 #include "Bouton.h"
 #include "Communication.h"
 
-#define BAUD 460800       // Frequence de transmission serielle
+#define BAUD 115200       // Frequence de transmission serielle
 
 
 
